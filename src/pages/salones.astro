@@ -1,5 +1,12 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+
+const salonOroImages = [
+    "/salones/oro/1.webp",
+    "/salones/oro/2.webp",
+    "/salones/oro/3.webp",
+    "/salones/oro/4.webp",
+];
 ---
 
 <Layout title="Servicios">
@@ -7,15 +14,24 @@ import Layout from "@/layouts/Layout.astro";
         <h1 class="text-center text-4xl mb-4 slide-in-lr">
             Salones de eventos
         </h1>
+        <h2 class="text-center text-3xl text-red-500 mb-4 slide-in-lr">
+            Salon oro
+        </h2>
         <div
             class="gallery md:grid md:grid-cols-2 sm:flex sm:justify-center sm:flex-wrap max-w-4xl mx-auto [&>div]:mb-4 gap-4 px-4"
         >
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            {
+                salonOroImages.map((imageUrl, index) => (
+                    <div class="h-46 w-full overflow-hidden">
+                        <img
+                            class="h-full w-full"
+                            src={imageUrl}
+                            loading="lazy"
+                            alt={`Imagen del salon oro número${index}`}
+                        />
+                    </div>
+                ))
+            }
         </div>
     </div>
 </Layout>
