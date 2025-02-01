@@ -8,13 +8,13 @@ interface Props {
 const { imagesURL } = Astro.props;
 ---
 
-<div id="default-carousel" class="relative w-full" data-carousel="slide">
+<div id="default-carousel" class="relative w-full bg-red-100" data-carousel="slide">
     <!-- Carousel wrapper -->
-    <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+    <div class="relative h-56 overflow-hidden rounded-lg md:h-96 bg-blue-200">
         <!-- Item 1 -->
         {
             imagesURL.map((imageURL, index) => (
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <div class="block duration-700 ease-in-out bg-green-400" data-carousel-item>
                     <Image src={imageURL} alt={`Imagen del carrusel ${index}`} width="1920" height="1080"/>
                 </div>
             ))
