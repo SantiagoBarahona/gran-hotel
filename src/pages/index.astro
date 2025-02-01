@@ -1,0 +1,64 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { Content } from "@/content/hero.md";
+import Carousel from "@/components/Carousel.astro";
+const carouselImages = ['/carousel/1.webp', '/carousel/2.webp', '/carousel/3.webp', '/carousel/4.webp', '/carousel/5.webp', '/carousel/6.webp',]
+---
+
+<Layout title="Inicio">
+	<main>
+		<div class="relative">
+			<div
+				class="absolute w-screen h-screen flex flex-col-reverse items-center top-0"
+			>
+				<div class="p-5 bg-slate-950/90 w-full" id="hero">
+					<h1 class="text-5xl text-orange-400 montserrat-500">Bienvenido a Gran Hotel</h1>
+					<h2 class="text-2xl text-slate-300 montserrat-500">
+						Descubre Medellín desde el centro. Confort y elegancia te esperan.
+					</h2>
+				</div>
+			</div>
+			<div class="w-screen h-screen" id="background-image"></div>
+		</div>
+	</main>
+
+	<section class="pt-1 m-4" aria-label="Descubre medellín desde el corazón de la ciudad">
+		<div class="flex flex-wrap max-lg:justify-center">
+			<div id="description" class="prose montserrat-500 lg:w-1/2 p-1">
+				<h2 id="description-title" class="text-2xl max-lg:text-center">
+					¡Descubre Medellín desde el corazón de la ciudad!
+				</h2>
+				<Content />
+			</div>
+			<div class="w-1/2 flex items-center rounded-xl ">
+				<Carousel imagesURL={carouselImages}/>
+			</div>
+		</div>
+	</section>
+
+	<style>
+		#background-image {
+			background: url("home/gran-hotel.jpg");
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position-y: center;
+		}
+
+		#hero{
+			animation: fade-in-bt 1s ease-out 1;
+		}
+
+		#description-title {
+			animation: fade-in-lr 1s ease-out forwards;
+			animation-timeline: view();
+			animation-range: entry 20% cover 25%;
+			margin-bottom: 1rem;
+		}
+
+		#description {
+			animation: fade-in-lr 3s ease-out forwards;
+			animation-timeline: view();
+			animation-range: entry 0 cover 30%;
+		}
+	</style>
+</Layout>

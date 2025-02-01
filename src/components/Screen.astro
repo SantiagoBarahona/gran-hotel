@@ -1,0 +1,35 @@
+---
+interface Props{
+    imageUrl: string
+    title: string
+    subtitle?: string
+    description?: string
+}
+
+const {imageUrl, title, subtitle, description} = Astro.props
+---
+
+<div class="relative snap-start">
+    <div
+        class="absolute w-screen h-screen flex flex-col-reverse items-center top-0"
+    >
+        <div class="p-5 bg-slate-950/90 w-full">
+            <div class="info">
+                <h2 class="text-3xl text-orange-400">{title}</h2>
+                <h2 class="text-2xl text-slate-300">{subtitle}</h2>
+                <p class="text-slate-200 max-w-xl">{description}</p>
+                <slot/>
+            </div>
+        </div>
+    </div>
+    <img src={imageUrl} class="h-screen w-screen object-cover object-center" alt={title}>
+</div>
+
+<style>
+    
+    .info{
+        animation: fade-in-lr ease-in both;
+        animation-timeline: view();
+        animation-range: entry 40%; 
+    }
+</style>

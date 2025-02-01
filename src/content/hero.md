@@ -1,0 +1,5 @@
+Ubicado en el centro de la ciudad, **GRAN HOTEL** ofrece la comodidad y conveniencia de estar en una zona residencial estratégica, a solo minutos de atracciones turísticas y culturales de la ciudad, como la emblemática Plaza Botero y el Museo de Antioquia. A solo cinco minutos de dos estaciones del metro.
+
+Contamos con modernas instalaciones que incluyen piscina, zona cardio, parqueadero y salones para eventos, pensados para brindarte una experiencia completa. Además, nuestras 108 habitaciones, algunas de ellas con capacidad para familias o grupos de hasta 5 personas, están diseñadas para ofrecerte el máximo confort y descanso.
+
+Disfruta también de una excelente oferta gastronómica en los alrededores y la cercanía al Centro Comercial Camino Real. Te invitamos a descubrir el verdadero espíritu de Medellín desde la comodidad de nuestro hotel. ¡Te esperamos!

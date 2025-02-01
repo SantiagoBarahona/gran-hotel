@@ -1,0 +1,18 @@
+---
+interface Props{
+    width: string,
+    height: string
+}
+
+const {width, height} = Astro.props
+---
+
+<i class="flex items-end gap-1">
+    <img
+        src="https://static.wixstatic.com/media/5e7e60_308ee65618ac48a6a2353201077841c3~mv2.png/v1/fill/w_77,h_98,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/GRANLOGO_3.png"
+        width={width}
+        height={height}
+        alt="Granhotel logo"
+    />
+    <span class="text-white text-xs">R.N.T. 141492</span>
+</i>

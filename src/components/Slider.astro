@@ -1,0 +1,127 @@
+<!-----
+TODO COnfiguar correctamente el slide de los botones, poner un div con un width fijo y obtener el ancho de este
+--- -->
+
+<div class="relative">
+    <div
+        class="controls absolute flex w-full h-full justify-between items-center z-10"
+    >
+        <button id="scroll-left-button" class="slider-button" disabled>
+            &#9664;
+        </button>
+        <button id="scroll-right-button" class="slider-button">
+            &#9654;
+        </button>
+    </div>
+    <div class="slider">
+        <!-----
+        <img src="slider/1.avif" alt="Hotel image 1" />
+        <img src="slider/2.avif" alt="Hotel image 2" />
+        <img src="slider/3.avif" alt="Hotel image 3" />
+        <img src="slider/4.avif" alt="Hotel image 4" />
+        <img src="slider/5.avif" alt="Hotel image 5" />
+        <img src="slider/6.avif" alt="Hotel image 6" />
+        -->
+        <slot/>
+    </div>
+</div>
+
+<style>
+    .slider {
+        width: 100%;
+        max-height: 100%;
+        position: relative;
+        display: flex;
+        overflow: scroll;
+        scroll-snap-type: x mandatory;
+    }
+
+    .slider img {
+        width: 100%;
+        left: 0;
+        position: sticky;
+        object-fit: cover;
+        scroll-snap-align: center;
+    }
+
+    .slider-button {
+        width: 50px;
+        height: 50px;
+        line-height: 0;
+        font-size: 1.5rem;
+        padding: 0.25rem;
+        color: #fff;
+        background-color: #222;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        border-radius: 50%;
+        box-shadow: 1px 4px 4px #333;
+        border: 2px solid transparent;
+        transition:
+            scale 0.25s ease,
+            border 0.25s linear,
+            background-color 2s;
+    }
+
+    .slider-button:enabled:hover {
+        scale: 120%;
+        border: 2px solid #09f;
+    }
+
+    .slider-button:disabled {
+        opacity: 0.3;
+    }
+</style>
+
+<script>
+    const images = document.querySelectorAll(
+        ".slider > img",
+    ) as NodeListOf<HTMLImageElement>;
+    let currentImageIndex = 0;
+    const slider = document.querySelector(".slider");
+
+    const scrollLeftButton = document.getElementById(
+        "scroll-left-button",
+    ) as HTMLButtonElement;
+    const scrollRightButton = document.getElementById(
+        "scroll-right-button",
+    ) as HTMLButtonElement;
+
+    const scrollLeft = () => {
+        slider?.scrollTo({
+            left: slider.scrollLeft - images[currentImageIndex].width,
+            behavior: "smooth",
+        });
+        currentImageIndex =
+            currentImageIndex == 0 ? currentImageIndex : currentImageIndex - 1;
+        console.log("currentImageIndex", currentImageIndex);
+        console.log("images length", images.length);
+        if (currentImageIndex == 0) {
+            scrollLeftButton.disabled = true;
+        } else {
+            scrollRightButton.disabled = false;
+        }
+    };
+
+    const scrollRight = () => {
+        slider?.scrollTo({
+            left: slider.scrollLeft + images[currentImageIndex].width,
+            behavior: "smooth",
+        });
+        currentImageIndex =
+            currentImageIndex > images.length
+                ? currentImageIndex
+                : currentImageIndex + 1;
+        console.log("currentImageIndex", currentImageIndex);
+        console.log("images length", images.length);
+        if (currentImageIndex < images.length) {
+            scrollLeftButton.disabled = false;
+        }
+        if (currentImageIndex == images.length - 1) {
+            scrollRightButton.disabled = true;
+        }
+    };
+
+    scrollLeftButton?.addEventListener("click", scrollLeft);
+    scrollRightButton?.addEventListener("click", scrollRight);
+</script>
