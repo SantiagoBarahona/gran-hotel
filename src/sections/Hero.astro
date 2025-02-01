@@ -13,3 +13,29 @@
         <div class="w-screen h-screen" id="background-image"></div>
     </div>
 </section>
+
+<style>
+	#background-image {
+		background: url("home/gran-hotel.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position-y: center;
+	}
+
+	#hero {
+		animation: fade-in-bt 1s ease-out 1;
+	}
+
+	#description-title {
+		animation: fade-in-lr 1s ease-out forwards;
+		animation-timeline: view();
+		animation-range: entry 20% cover 25%;
+		margin-bottom: 1rem;
+	}
+
+	#description {
+		animation: fade-in-lr 3s ease-out forwards;
+		animation-timeline: view();
+		animation-range: entry 0 cover 30%;
+	}
+</style>
