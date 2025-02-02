@@ -18,11 +18,31 @@ const salonMedellinImages = [
     "/salones/medellin/6.webp",
     "/salones/medellin/7.webp",
 ]
+
+const salonZafiroImages = [
+    "/salones/zafiro/1.webp",
+    "/salones/zafiro/2.webp",
+    "/salones/zafiro/3.webp",
+    "/salones/zafiro/4.webp",
+    "/salones/zafiro/5.webp",
+    "/salones/zafiro/6.webp",
+    "/salones/zafiro/7.webp",
+]
+
+const otrosSalonesImages = [
+    "/salones/otros/1.webp",
+    "/salones/otros/2.webp",
+    "/salones/otros/3.webp",
+    "/salones/otros/4.avif",
+    "/salones/otros/5.avif",
+]
 ---
 
 <Layout title="Salones para eventos">
     <div class="pt-20">
         <Gallery title="Salón oro" imagesUrl={salonOroImages}/>
         <Gallery title="Salón Medellín" imagesUrl={salonMedellinImages} />
+        <Gallery title="Salón Zafíro" imagesUrl={salonZafiroImages} />
+        <Gallery title="Otros salones" imagesUrl={otrosSalonesImages} />
     </div>
 </Layout>
