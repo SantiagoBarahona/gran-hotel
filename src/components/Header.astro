@@ -1,6 +1,6 @@
 ---
+import Contacts from "./Contacts.astro";
 import Logo from "./Logo.astro";
-import SocialNetworks from "./SocialNetworks.astro";
 
 const currentPathname = Astro.url.pathname;
 
@@ -61,7 +61,7 @@ console.log(currentPathname);
         </ul>
     </nav>
     <div class="lg:flex items-center hidden">
-        <SocialNetworks />
+        <Contacts>
     </div>
 </header>
 
