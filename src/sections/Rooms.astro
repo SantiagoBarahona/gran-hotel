@@ -1,0 +1,15 @@
+---
+import RoomCard from "@/components/RoomCard.astro";
+---
+
+<section class="mt-8">
+    <h2 class="text-4xl text-center mb-4">
+        <span class="inline px-4 border-b-4 border-solid border-orange-400"
+            ><strong>Habitaciones</strong></span>
+    </h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3">
+        <RoomCard title="Habitacion indiviudal" capacity={1} beds={1} imageSrc="/habitaciones/2.jpg"/>
+        <RoomCard title="Habitacion doble" capacity={2} beds={1} imageSrc="/habitaciones/4.jpg"/>
+        <RoomCard title="Habitacion indiviudal" capacity={1} beds={1} imageSrc="/habitaciones/2.jpg"/>
+    </div>
+</section>
