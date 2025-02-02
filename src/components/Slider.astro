@@ -81,14 +81,25 @@ TODO COnfiguar correctamente el slide de los botones, poner un div con un width 
 
 <script>
     const slider = document.querySelector(".slider") as HTMLDivElement;
+    const controls = document.querySelector(".controls") as HTMLDivElement;
     const sliderWidth = slider?.clientWidth as number;
-    const images = document.querySelectorAll(".slider > img")
+    const images = document.querySelectorAll(".slider > img");
 
     const scrollLeftButton = document.getElementById("scroll-left-button");
     const scrollRightButton = document.getElementById("scroll-right-button");
 
+    let isMouseOverSlider = false;
+
+    controls.addEventListener("mouseenter", () => {
+        isMouseOverSlider = true;
+    });
+
+    controls.addEventListener("mouseleave", () => {
+        isMouseOverSlider = false;
+    });
+
     const scrollLeft = () => {
-        const left = slider.scrollLeft == 0 ? slider.clientWidth * images.length : slider.scrollLeft - sliderWidth 
+        const left = slider.scrollLeft == 0 ? slider.clientWidth * images.length : slider.scrollLeft - sliderWidth;
         slider?.scrollTo({
             left: left,
             behavior: "smooth",
@@ -96,9 +107,9 @@ TODO COnfiguar correctamente el slide de los botones, poner un div con un width 
     };
 
     const scrollRight = () => {
-        let left = slider.scrollLeft + sliderWidth
-        if(slider.scrollLeft + sliderWidth > slider.clientWidth * (images.length - 1)){
-            left = 0   
+        let left = slider.scrollLeft + sliderWidth;
+        if (slider.scrollLeft + sliderWidth > slider.clientWidth * (images.length - 1)) {
+            left = 0;
         }
         slider?.scrollTo({
             left: left,
@@ -108,4 +119,14 @@ TODO COnfiguar correctamente el slide de los botones, poner un div con un width 
 
     scrollLeftButton?.addEventListener("click", scrollLeft);
     scrollRightButton?.addEventListener("click", scrollRight);
+
+    function automaticScroll() {
+        console.log("excuted")
+        if (!isMouseOverSlider) {
+            scrollRight();
+        }
+        setTimeout(() => { automaticScroll(); }, 4000);
+    }
+
+    automaticScroll();
 </script>
