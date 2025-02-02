@@ -3,7 +3,7 @@
 - Link a Gran Tierra
 - Fonts (Delete Oswald)
 - OPTIMIZAR IMAGENES
-- Optimizar logos
+- Mejorar Aspect ratio de las imagenes en salones
 - Ajustar el tamaño de las imagenes correctamente (Restaurante de oro)
 - Idioma ingles
 - Mejoras accesibilidad
