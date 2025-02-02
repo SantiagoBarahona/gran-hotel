@@ -3,11 +3,6 @@ import Facebook from "@/atoms/icons/Facebook.astro";
 import Instagram from "@/atoms/icons/Instagram.astro";
 import Location from "@/atoms/icons/Location.astro";
 
-interface Props {
-    hoverColor?: string;
-}
-
-const { hoverColor = "rgb(255 0 0)" } = Astro.props;
 ---
 
 <div
@@ -29,7 +24,7 @@ const { hoverColor = "rgb(255 0 0)" } = Astro.props;
     </a>
 </div>
 
-<style define:vars={{ hoverColor }}>
+<style>
     #social-networks > a {
         border: 2px solid transparent;
         transition: scale ease, border ease;
@@ -37,7 +32,7 @@ const { hoverColor = "rgb(255 0 0)" } = Astro.props;
     }
 
     #social-networks > a:hover {
-        border: 2px solid var(--hoverColor);
+        border: 2px solid orange;
         scale: 1.25;
         transition-duration: 0.5s;
     }
