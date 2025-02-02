@@ -1,4 +1,5 @@
 ---
+import Gallery from "@/components/Gallery.astro";
 import Layout from "@/layouts/Layout.astro";
 
 const salonOroImages = [
@@ -11,25 +12,7 @@ const salonOroImages = [
 
 <Layout title="Salones para eventos">
     <div class="pt-20">
-        <h2 class="text-center text-3xl text-red-500 mb-4 slide-in-lr">
-            Salon oro
-        </h2>
-        <div
-            class="gallery grid md:grid-cols-2 mx-auto [&>div]:mb-4 gap-4 px-4"
-        >
-            {
-                salonOroImages.map((imageUrl, index) => (
-                    <div class="h-46 w-full overflow-hidden">
-                        <img
-                            class="w-full h-full object-cover"
-                            src={imageUrl}
-                            loading="lazy"
-                            alt={`Imagen del salon oro número${index}`}
-                        />
-                    </div>
-                ))
-            }
-        </div>
+        <Gallery title="Salón oro" imagesUrl={salonOroImages}/>
     </div>
 </Layout>
 
