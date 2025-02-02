@@ -1,23 +1,36 @@
 ---
-import { Content } from "@/content/hero.md";
-import Slider from "@/components/Slider.astro";
+import Apartament from "@/atoms/icons/Apartament.astro";
+import LocationOn from "@/atoms/icons/LocationOn.astro";
+import Restaurant from "@/atoms/icons/Restaurant.astro";
+import Card from "@/components/Card.astro";
 
-const slideshowImages = ['/carousel/1.webp', '/carousel/2.webp', '/carousel/3.webp', '/carousel/4.webp', '/carousel/5.webp', '/carousel/6.webp',]
 ---
 
 <section
     class="pt-1 m-4"
     aria-label="Descubre medellín desde el corazón de la ciudad"
 >
-    <div class="flex flex-wrap max-lg:justify-center">
-        <div id="description" class="prose lg:w-1/2 p-1">
-            <h2 id="description-title" class="text-2xl max-lg:text-center">
-                ¡Descubre Medellín desde el corazón de la ciudad!
-            </h2>
-            <Content />
-        </div>
-        <div class="w-1/2 flex items-center">
-            <Slider imagesUrl={slideshowImages}/>
-        </div>
+    <div class="grid md:grid-cols-2 lg-grid-cols-4 gap-4">
+            <Card 
+                title="Ubicación Estratégica"
+                description="Ubicado en el centro de la ciudad, GRAN HOTEL ofrece la comodidad y conveniencia de estar en una zona residencial estratégica, a solo minutos de atracciones turísticas y culturales de la ciudad, como la emblemática Plaza Botero y el Museo de Antioquia. A solo cinco minutos de dos estaciones del metro.">
+                <i slot="icon">
+                    <LocationOn/>
+                </i>
+            </Card>
+            <Card 
+                title="Instalaciones y Comodidades"
+                description="Contamos con modernas instalaciones que incluyen piscina, zona cardio, parqueadero y salones para eventos, pensados para brindarte una experiencia completa. Además, nuestras 108 habitaciones, algunas de ellas con capacidad para familias o grupos de hasta 5 personas, están diseñadas para ofrecerte el máximo confort y descanso.">
+                <i slot="icon">
+                    <Apartament/>
+                </i>
+            </Card>
+            <Card 
+                title="Gastronomía y Entretenimiento"
+                description="Disfruta también de una excelente oferta gastronómica en los alrededores y la cercanía al Centro Comercial Camino Real. Te invitamos a descubrir el verdadero espíritu de Medellín desde la comodidad de nuestro hotel.">
+                <i slot="icon">
+                    <Restaurant/>
+                </i>
+            </Card>
     </div>
 </section>
