@@ -205,7 +205,7 @@ Deberes de GH Gran Hotel. cuando obra como Responsable del tratamiento de datos 
 
 Todos los obligados a cumplir esta política deben tener presente que es responsabilidad de GH Gran Hotel cumplir los deberes que al respecto imponga la ley. Por ende, deben obrar de tal forma que cumplan las siguientes obligaciones:
 
-### 8.1. Deberes de GH Gran Hotel respecto del titular del dato.​
+### 8.1. Deberes de GH Gran Hotel respecto del titular del dato.​
 
 Solicitar y conservar, en las condiciones previstas en esta política, copia de la respectiva autorización otorgada por el titular.
 
