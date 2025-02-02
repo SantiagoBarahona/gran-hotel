@@ -1,8 +1,5 @@
-# TO DO LIST
+# Gran hotel
 
-- Link a Gran Tierra
-- OPTIMIZAR IMAGENES
-- Ajustar el tamaño de las imagenes correctamente (Restaurante de oro)
-- Idioma ingles
-- Mejoras accesibilidad
-- Realizar componente de carousel (Para el inicio)
+Esta es la pagina web de gran hotel
+
+Desarrollada por: Santiago Zapata Barahona
