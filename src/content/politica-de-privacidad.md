@@ -217,11 +217,7 @@ Informar a solicitud del titular sobre el uso dado a sus datos personales.
 
 Tramitar las consultas y reclamos formulados en los términos señalados en la presente política.
 
- 
-
-8.2. Deberes de GH Gran Hotel respecto de la calidad, seguridad y confidencialidad de los datos personales 
-
-​
+### 8.2. Deberes de GH Gran Hotel respecto de la calidad, seguridad y confidencialidad de los datos personales 
 
 Observar los principios de veracidad, calidad, seguridad y confidencialidad en los términos establecidos en la legislación Colombiana.
 
@@ -229,13 +225,9 @@ Conservar la información bajo las condiciones de seguridad necesarias para impe
 
 Actualizar la información cuando sea necesario.
 
-Rectificar los datos personales cuando ello sea procedente.
+Rectificar los datos personales cuando ello sea procedente. 
 
- 
-
-8.3. Deberes de GH Gran Hotel cuando realiza el tratamiento a través de un Encargado
-
-​
+### 8.3. Deberes de GH Gran Hotel cuando realiza el tratamiento a través de un Encargado
 
 Suministrar al Encargado del tratamiento únicamente los datos personales que está autorizado a suministrar a terceros.
 
@@ -249,25 +241,15 @@ Exigir al Encargado del tratamiento, en todo momento, el respeto a las condicion
 
 Informar al Encargado del tratamiento cuando determinada información se encuentre en discusión por parte del titular, una vez se haya presentado la reclamación y no haya finalizado el trámite respectivo.
 
- 
-
-8.4. Deberes de GH Gran Hotel. respecto de la Superintendencia de Industria y Comercio
-
-​
+### 8.4. Deberes de GH Gran Hotel. respecto de la Superintendencia de Industria y Comercio
 
 Informarle las eventuales violaciones a los códigos de seguridad y la existencia de riesgos en la administración de la información de los titulares.
 
 Cumplir las instrucciones y requerimientos que imparta la Superintendencia de Industria y Comercio.
 
- 
-
-8.5. Deberes de GH Gran Hotel cuando obra como Encargado del tratamiento de datos personales.
-
-​
+### 8.5. Deberes de GH Gran Hotel cuando obra como Encargado del tratamiento de datos personales.
 
 Si GH Gran Hotel realiza el tratamiento de datos en nombre de otra entidad u organización (Responsable del tratamiento) deberá cumplir los siguientes deberes:
-
-​
 
 Establecer que el Responsable del tratamiento esté autorizado para suministrar a GH Gran Hotel los datos personales que tratará como Encargado.
 
@@ -293,54 +275,32 @@ Informar a la Superintendencia de Industria y Comercio cuando se presenten viola
 
 Cumplir las instrucciones y requerimientos que imparta la Superintendencia de Industria y Comercio.
 
+## 9. Transferencia internacional de datos personales.
 ​
-
-9. Transferencia internacional de datos personales.
-​
-
 Cuando se envíen o transfieran datos a otro país será necesario contar con la autorización del titular de la información que es objeto de transferencia. Salvo que la ley diga lo contrario, es presupuesto necesario la existencia de dicha autorización para efectuar la circulación internacional de datos. En este sentido, antes de enviar datos personales a otro país, los obligados de cumplir esta política deberán verificar que se cuenta con la autorización previa, expresa e inequívoca del titular que permita trasmitir sus datos personales.
 
 Dicha transferencia de los datos personales se realiza únicamente a terceros con quien GH Gran Hotel . tenga vínculo contractual, comercial y/o jurídico.
 
-​
-
-10. Aviso de Privacidad.
- 
+## 10. Aviso de Privacidad.
 
 GH Gran Hotel , en lo sucesivo y a quien le sean cedidos los derechos, le informa que el aviso de privacidad de tratamiento de sus datos personales puede consultarlo en las páginas web  www.granhotel.com.co y www.sedecampestre.com
 
+## 11. Modificación y/o actualización de la política de protección de datos y manejo de información.
  
-11. Modificación y/o actualización de la política de protección de datos y manejo de información.
- 
-
 Cualquier cambio sustancial en las políticas de Tratamiento, se comunicará de forma oportuna a los titulares de los datos a través de los medios habituales de contacto y/o a través de:
 
-​
-
 Las páginas Web de la GH Gran Hotel . www.granhotel.com.co y www.sedecampestre.com
-
  
-
 Correo electrónico enviado a los titulares, para los titulares que no tengan acceso a medios electrónicos se efectuará la comunicación por correo certificado y en su defecto se publicará en un diario de amplia circulación.
-
-​
 
 Las comunicaciones se enviarán como mínimo, diez (10) días antes de implementar las nuevas políticas y/o actualización sustancial de la misma.
 
+## 12. Vigencia de las políticas de tratamiento de información personal.
  
-12. Vigencia de las políticas de tratamiento de información personal.
- 
-
 Las presentes políticas rigen a partir del 15 de Octubre de 2016
 
-​
-
-Por regla general, el término de las autorizaciones sobre el uso de los datos personales por los titulares se entiende por el término de la relación comercial o de la vinculación al servicio y durante el ejercicio del objeto social de la compañía.
-
- 
+Por regla general, el término de las autorizaciones sobre el uso de los datos personales por los titulares se entiende por el término de la relación comercial o de la vinculación al servicio y durante el ejercicio del objeto social de la compañía. 
 
 Las autorizaciones sobre los datos de los titulares podrán terminar por voluntad de los mismos en cualquier momento. Si la persona es un cliente activo de GH Gran Hotel , no se podrán usar sus datos para nada diferente a la prestación del producto o servicio y para el ofrecimiento de renovaciones posteriores cuando el servicio tenga esta modalidad.
-
- 
 
 Cuando los términos de las políticas de privacidad y uso de información personal de cualquier de los servicios o productos contratados por un titular, cambien en lo esencial, por regla general, en los servicios que tengan la opción de renovación se obtendrá en esta la nueva autorización. Para los demás casos, se obtendrá la autorización en la forma establecida para cada política o aviso de privacidad o a través del medio usual de contacto entre la empresa y los titulares.
