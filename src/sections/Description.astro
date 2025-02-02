@@ -1,8 +1,8 @@
 ---
 import { Content } from "@/content/hero.md";
-import Carousel from "@/components/Carousel.astro";
+import Slider from "@/components/Slider.astro";
 
-const carouselImages = ['/carousel/1.webp', '/carousel/2.webp', '/carousel/3.webp', '/carousel/4.webp', '/carousel/5.webp', '/carousel/6.webp',]
+const slideshowImages = ['/carousel/1.webp', '/carousel/2.webp', '/carousel/3.webp', '/carousel/4.webp', '/carousel/5.webp', '/carousel/6.webp',]
 ---
 
 <section
@@ -16,8 +16,8 @@ const carouselImages = ['/carousel/1.webp', '/carousel/2.webp', '/carousel/3.web
             </h2>
             <Content />
         </div>
-        <div class="w-1/2 flex items-center rounded-xl">
-            <Carousel imagesURL={carouselImages} />
+        <div class="w-1/2 flex items-center">
+            <Slider imagesUrl={slideshowImages}/>
         </div>
     </div>
 </section>
