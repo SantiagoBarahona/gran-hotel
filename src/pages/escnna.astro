@@ -1,6 +1,20 @@
 ---
-import Prose from "@/layouts/Prose.astro";
 import Content from "@/content/escnna.md"
+import Layout from "@/layouts/Layout.astro";
 ---
 
-<Prose Content={Content} title="Política ESCNNA"/>
+<Layout title={"ESCNNA"}>
+    <div class="background w-screen h-screen">
+        <article class="prose prose-h1:text-white prose-p:text-slate-400 prose-strong:bg-white/50 mx-auto max-sm:mx-5 py-20">
+                <Content />
+        </article>
+    </div>
+</Layout>
+
+<style>
+    .background{
+        background-image: url(/escnna/escnna.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+</style>
