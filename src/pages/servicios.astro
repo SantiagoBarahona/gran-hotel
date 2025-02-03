@@ -2,6 +2,7 @@
 import Screen from "@/components/Screen.astro";
 import ScreenContainer from "@/components/ScreenContainer.astro";
 import Layout from "@/layouts/Layout.astro";
+import ServicesList from "@/sections/ServicesList.astro";
 ---
 
 <Layout title="Servicios">
@@ -15,5 +16,6 @@ import Layout from "@/layouts/Layout.astro";
         <Screen title="Zona húmeda" imageUrl="/servicios/piscina.webp" description="Sumérgete en la tranquilidad de nuestra piscina, el lugar perfecto para relajarte y disfrutar."/>
         <Screen title="Zona cardio" imageUrl="/servicios/cardio.webp" description="Un espacio pensado para tu salud: ejercítate en nuestra agradable área de cardio, un lugar diseñado para brindarte comodidad y armonía mientras te mueves al ritmo de tu cuerpo."/>
     </ScreenContainer>
+    <ServicesList />
 </Layout>
 
