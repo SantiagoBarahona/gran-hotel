@@ -5,7 +5,7 @@ import Person from "@/atoms/icons/Person.astro";
 interface Props {
     title: string;
     capacity: number;
-    beds: number;
+    beds: number[];
     imageSrc: string;
 }
 
@@ -13,14 +13,17 @@ const { title, capacity, imageSrc, beds } = Astro.props;
 ---
 
 <div
-    class="card bg-gray-200/50 border-2 border-solid border-slate-300 p-6 pt-14 m-4 shadow-md shadow-gray-800 relative transition-colors duration-300 hover:bg-gray-950/90 hover:text-white"
+    class="card border-2 border-solid border-slate-300 p-6 pt-14 m-4 shadow-md shadow-gray-800 relative transition-colors duration-300 hover:bg-gray-950/90 hover:text-white"
 >
-    <div class="transition-transform duration-1000 hover:-translate-y-4 relative z-40">
+    <div
+        class="transition-transform duration-1000 hover:-translate-y-4 relative z-40"
+    >
         <div class="mb-4">
             <img
                 src={imageSrc}
                 class="w-full h-46 object-cover object-center rounded-sm shadow-sm shadow-slate-400"
                 loading="lazy"
+                alt={`${title}`}
             />
         </div>
         <div>
@@ -30,9 +33,23 @@ const { title, capacity, imageSrc, beds } = Astro.props;
                     <i class="flex items-center"
                         ><Person /> <span class="text-2xl">{capacity}</span></i
                     >
-                    <i class="flex items-center"
-                        ><Bed /> <span class="text-2xl">{beds}</span></i
-                    >
+                    <div class="flex gap-x-1">
+                        {
+                            beds.map((numberOfBeds, index) => (
+                                <>
+                                    <i class="flex items-center">
+                                        <Bed />{" "}
+                                        <span class="text-2xl">
+                                            {numberOfBeds}
+                                        </span>
+                                    </i>
+                                    {index < beds.length - 1 && (
+                                        <span class="mt-1">ó</span>
+                                    )}
+                                </>
+                            ))
+                        }
+                    </div>
                 </div>
             </div>
         </div>
