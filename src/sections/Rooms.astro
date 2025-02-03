@@ -1,5 +1,15 @@
 ---
+import Button from "@/atoms/button.astro";
 import RoomCard from "@/components/RoomCard.astro";
+
+const roomData = [
+    { title: "Habitacion indiviudal", capacity: 1, beds: [1], imageSrc: "/habitaciones/individual/1.jpg" },
+    { title: "Habitacion doble", capacity: 2, beds: [1, 2], imageSrc: "/habitaciones/doble/1.jpg" },
+    { title: "Habitacion triple", capacity: 3, beds: [3], imageSrc: "/habitaciones/2.jpg" },
+    { title: "Habitacion cuádruple", capacity: 4, beds: [3, 2], imageSrc: "/habitaciones/2.jpg" },
+    { title: "Habitacion doble superior", capacity: 1, beds: [1], imageSrc: "/habitaciones/2.jpg" },
+    { title: "Habitacion familiar", capacity: 5, beds: [5, 4], imageSrc: "/habitaciones/2.jpg" }
+];
 ---
 
 <section class="mt-8">
@@ -8,8 +18,18 @@ import RoomCard from "@/components/RoomCard.astro";
             ><strong>Habitaciones</strong></span>
     </h2>
     <div class="grid md:grid-cols-2 lg:grid-cols-3">
-        <RoomCard title="Habitacion indiviudal" capacity={1} beds={1} imageSrc="/habitaciones/2.jpg"/>
-        <RoomCard title="Habitacion doble" capacity={2} beds={1} imageSrc="/habitaciones/4.jpg"/>
-        <RoomCard title="Habitacion indiviudal" capacity={1} beds={1} imageSrc="/habitaciones/2.jpg"/>
+        {
+            roomData.map(room => (
+                <RoomCard
+                    title={room.title}
+                    capacity={room.capacity}
+                    beds={room.beds}
+                    imageSrc={room.imageSrc}
+                />
+            ))
+        }
+    </div>
+    <div class="m-4">
+        <Button class="m-auto" style="slate">Haz click para reservar</Button>
     </div>
 </section>
