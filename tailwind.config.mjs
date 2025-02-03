@@ -4,7 +4,13 @@ import typography from "@tailwindcss/typography"
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		extend: {},
+		extend: {
+			colors: {
+				javascript: '#f7df1e',
+				'javascript-dark': '#998c06',
+				'light-gray': '#7F7F7F',
+			}
+		},
 	},
 	plugins: [typography()],
 }
