@@ -5,7 +5,7 @@ import Layout from "@/layouts/Layout.astro";
 
 <Layout title={"ESCNNA"}>
     <div class="background w-screen h-screen">
-        <article class="prose prose-h1:text-white prose-p:text-slate-400 prose-strong:bg-white/50 mx-auto max-sm:mx-5 py-20">
+        <article class="prose prose-h1:text-white prose-p:text-white prose-strong:text-white  prose-p:bg-black/50 prose-p:p-4 prose-p:rounded-xl prose-p:shadow-md prose-p:shadow-black mx-auto max-sm:mx-5 py-20 backdrop:blur-lg">
                 <Content />
         </article>
     </div>
@@ -15,6 +15,7 @@ import Layout from "@/layouts/Layout.astro";
     .background{
         background-image: url(/escnna/escnna.jpg);
         background-size: cover;
+        background-position: center;
         background-repeat: no-repeat;
     }
 </style>
