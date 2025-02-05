@@ -3,7 +3,7 @@
 
 interface Props {
   href?: string;
-  style?: 'white' | 'yellow' | 'transparent' | 'slate';
+  style?: 'white' | 'yellow' | 'transparent' | 'slate' | 'black' | 'red';
   class?: string;
   disabled?: boolean
 }
@@ -21,6 +21,8 @@ const STYLES: Record<string, string> = {
     "text-white bg-transparent border-white hover:bg-white hover:text-black",
   slate:
     "text-white bg-slate-950/90 border-black hover:bg-white hover:border-black hover:text-black",
+  red:
+    "text-white bg-red-granhotel border-black hover:bg-white hover:border-black hover:text-black"
 } as const;
 
 const currentStyle = STYLES[style];
