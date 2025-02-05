@@ -6,9 +6,10 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				javascript: '#f7df1e',
+				'javascript': '#f7df1e',
 				'javascript-dark': '#998c06',
 				'light-gray': '#7F7F7F',
+				'red-granhotel': 'rgb(170, 0, 0)'
 			}
 		},
 	},
