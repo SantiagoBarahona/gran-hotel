@@ -1,41 +1,47 @@
-<section>
-    <div class="relative">
-        <div
-            class="absolute w-screen h-screen flex flex-col-reverse items-center top-0"
-        >
-            <div class="p-5 bg-slate-950/90 w-full" id="hero">
-                <h1 class="text-5xl text-orange-400 montserrat-500">Bienvenido a Gran Hotel</h1>
-                <h2 class="text-2xl text-slate-300 montserrat-500">
-                    Descubre Medellín desde el centro. Confort y elegancia te esperan.
-                </h2>
-            </div>
-        </div>
-        <div class="w-screen h-screen" id="background-image"></div>
-    </div>
+---
+import Button from "@/atoms/Button.astro";
+import Contacts from "@/components/Contacts.astro";
+import Slider from "@/components/Slider.astro";
+import { homeSliderImages } from "@/data/slider.data";
+---
+
+<section class="w-screen h-full relative overflow-hidden mb-4 pt-20">
+	<div class="grid md:grid-cols-2 w-full h-full p-4 md:p-12 gap-4 ">
+		<div class="flex flex-col gap-8">
+			<div class="lg:m-auto lg:text-center">
+				<h1 class="text-4xl md:text-5xl text-white">
+					<strong class="w-full">
+						Descubre Medellín desde el centro en <span
+							class="text-orange-400">Gran Hotel</span
+						>
+					</strong>
+				</h1>
+				<h2 class="text-xl mt-1 text-red-400">
+					Confort y elegancia te esperan
+				</h2>
+				<Button style="red" href="/reserva" class="mt-4 lg:mx-auto">Reservar ahora</Button>
+			</div>
+		</div>
+		<div
+			class="w-full h-96 rounded-xl overflow-hidden shadow-lg shadow-black "
+		>
+			<Slider imagesUrl={homeSliderImages} />
+		</div>
+	</div>
 </section>
 
 <style>
-	#background-image {
-		background: url("home/gran-hotel.jpg");
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position-y: center;
-	}
-
-	#hero {
-		animation: fade-in-bt 1s ease-out 1;
-	}
-
-	#description-title {
-		animation: fade-in-lr 1s ease-out forwards;
-		animation-timeline: view();
-		animation-range: entry 20% cover 25%;
-		margin-bottom: 1rem;
-	}
-
-	#description {
-		animation: fade-in-lr 3s ease-out forwards;
-		animation-timeline: view();
-		animation-range: entry 0 cover 30%;
+	section {
+		background: #000000; /* fallback for old browsers */
+		background: -webkit-linear-gradient(
+			to top,
+			#434343,
+			#000000
+		); /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(
+			to top,
+			#434343,
+			#000000
+		); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	}
 </style>
