@@ -4,41 +4,33 @@ import Chair from "@/atoms/icons/Chair.astro";
 import LocationOn from "@/atoms/icons/LocationOn.astro";
 import Restaurant from "@/atoms/icons/Restaurant.astro";
 import Card from "@/components/Card.astro";
-
 ---
 
-<section
-    class="pt-1 m-4"
-    aria-label="Descubre medellín desde el corazón de la ciudad"
->
-    <div class="grid md:grid-cols-2 lg-grid-cols-4 gap-4">
-            <Card 
-                title="Ubicación Estratégica"
-                description="Ubicado en el centro de la ciudad, gran hotel ofrece la comodidad y conveniencia de estar en una zona residencial estratégica, a solo minutos de atracciones turísticas y culturales de la ciudad, como la emblemática Plaza Botero y el Museo de Antioquia. A solo cinco minutos de dos estaciones del metro.">
-                <i slot="icon">
-                    <LocationOn/>
-                </i>
-            </Card>
-            <Card 
-                title="Instalaciones y Comodidades"
-                description="Contamos con modernas instalaciones que incluyen piscina, zona cardio, parqueadero y salones para eventos, pensados para brindarte una experiencia completa. Además, nuestras 108 habitaciones, algunas de ellas con capacidad para familias o grupos de hasta 5 personas, están diseñadas para ofrecerte el máximo confort y descanso.">
-                <i slot="icon">
-                    <Apartament/>
-                </i>
-            </Card>
-            <Card 
-                title="Gastronomía y Entretenimiento"
-                description="Disfruta también de una excelente oferta gastronómica en los alrededores y la cercanía al Centro Comercial Camino Real. Te invitamos a descubrir el verdadero espíritu de Medellín desde la comodidad de nuestro hotel.">
-                <i slot="icon">
-                    <Restaurant/>
-                </i>
-            </Card>
-            <Card 
-                title="Salones de eventos"
-                description="Celebra momentos inolvidables en nuestros exclusivos salones de eventos, diseñados para brindar elegancia, confort y funcionalidad. Ya sea para una celebración sofisticada, una conferencia corporativa o un evento especial, nuestros espacios versátiles se adaptan a cualquier ocasión.">
-                <i slot="icon">
-                    <Chair/>
-                </i>
-            </Card>
+<section aria-label="Descubre medellín desde el corazón de la ciudad" class="px-4 py-4">
+    <div class="grid lg:grid-cols-3 gap-4">
+        <Card
+            title="Ubicación Estratégica"
+            description="Ubicado en el centro de la ciudad, a solo minutos de la emblemática Plaza Botero y el Museo de Antioquia. A solo cinco minutos de dos estaciones del metro. Disfruta una excelente oferta gastronómica en los alrededores y la cercanía al Centro Comercial Camino Real."
+        >
+            <i slot="icon">
+                <LocationOn />
+            </i>
+        </Card>
+        <Card
+            title="Instalaciones y Servicios"
+            description="Contamos con piscina, zona cardio, parqueadero y salones para eventos. Tenemos 108 habitaciones, algunas con capacidad para familias o grupos de hasta 5 personas diseñadas para ofrecerte el máximo confort y descanso."
+        >
+            <i slot="icon">
+                <Apartament />
+            </i>
+        </Card>
+        <Card
+            title="Salones de eventos"
+            description="Para una celebración sofisticada, una conferencia corporativa o un evento especial, nuestros espacios se adaptan a cualquier ocasión. Celebra momentos inolvidables en nuestros salones de eventos elegantes, confortables y funcionales. "
+        >
+            <i slot="icon">
+                <Chair />
+            </i>
+        </Card>
     </div>
 </section>
