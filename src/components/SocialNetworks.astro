@@ -7,7 +7,7 @@ import Location from "@/atoms/icons/Location.astro";
 
 <div
     id="social-networks"
-    class="flex gap-3 [&>a]:bg-white [&>a]:rounded-xl [&>a]:p-1"
+    class="flex gap-3"
 >
     <a href="https://www.facebook.com/granhotelmedellin">
         <i><Facebook /></i>
@@ -16,24 +16,15 @@ import Location from "@/atoms/icons/Location.astro";
     <a href="https://www.instagram.com/gran_hotel_medellin/">
         <i><Instagram /></i>
     </a>
-
-    <a
-        href="https://www.google.com.co/maps/place/Cl.+54+%23%2345-92,+Medell%C3%ADn,+Antioquia/@6.2511386,-75.5652774,17z/data=!4m13!1m7!3m6!1s0x8e4428f9d364712f:0xa5e595415be7f21b!2sCl.+54+%23%2345-92,+Medell%C3%ADn,+Antioquia!3b1!8m2!3d6.2511333!4d-75.5630887!3m4!1s0x8e4428f9d364712f:0xa5e595415be7f21b!8m2!3d6.2511333!4d-75.5630887?hl=es"
-    >
-        <i><Location /></i>
-    </a>
 </div>
 
 <style>
     #social-networks > a {
-        border: 2px solid transparent;
-        transition: scale ease, border ease;
-        transition-duration: 1s;
+        transition: scale ease 400ms;
     }
 
     #social-networks > a:hover {
-        border: 2px solid orange;
-        scale: 1.25;
-        transition-duration: 0.5s;
+        scale: 1.10;
+        transition-duration: 200ms;
     }
 </style>
