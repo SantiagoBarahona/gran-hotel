@@ -7,15 +7,15 @@ const currentPathname = Astro.url.pathname;
 const links = [
     {
         label: "Inicio",
-        url: "/",
+        url: "/#inicio",
     },
     {
         label: "Habitaciones",
-        url: "/habitaciones",
+        url: "/#habitaciones",
     },
     {
         label: "Servicios",
-        url: "/servicios",
+        url: "/#servicios",
     },
     {
         label: "Salones para eventos",
@@ -42,7 +42,7 @@ console.log(currentPathname);
         <ul class="md:flex text-sm [&>li>a]:px-4 main-ul h-full">
             {
                 links.map((link) => (
-                    <li class="">
+                    <li class="navbar-link">
                         <a
                             href={link.url}
                             class:list={[
@@ -121,7 +121,6 @@ console.log(currentPathname);
         }
 
         @media (max-width: 768px) {
-
             .active {
                 border: none;
             }
@@ -162,3 +161,15 @@ console.log(currentPathname);
         }
     </style>
 </header>
+
+<script>
+    document.addEventListener("astro:page-load", () => {
+        const navbarLinks = document.querySelectorAll(".navbar-link");
+        navbarLinks.forEach((link) =>
+            link.addEventListener("click", () => {
+                navbarLinks.forEach((link) => link.classList.remove("active"));
+                link.classList.add("active");
+            }),
+        );
+    });
+</script>
