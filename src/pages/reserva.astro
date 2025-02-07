@@ -8,32 +8,66 @@ import Layout from "@/layouts/Layout.astro";
 ---
 
 <Layout title="Reserva">
-    <article class="w-full sm:h-full md:h-screen  py-20">
+    <article class="w-full sm:h-full md:h-screen py-20">
         <h2 class="text-4xl text-center mb-4 mt-8">
             <span class="inline px-4"
-                ><strong>Conoce nuestros canales de atención</strong></span>
+                ><strong>Conoce nuestros canales de atención</strong></span
+            >
         </h2>
-        <p class="text-sm text-gray-500 text-center p-4 md:w-1/2 m-auto">Nuestro equipo está disponible 24/7 para atender cualquier consulta o solicitud. Ya sea para realizar una reserva, resolver dudas o brindarle asistencia durante su estancia, estamos aquí para ayudarle en todo momento. ¡Contáctenos cuando lo necesite!</p>
+        <p class="text-sm text-gray-500 text-center p-4 md:w-1/2 m-auto">
+            Nuestro equipo está disponible 24/7 para atender cualquier consulta
+            o solicitud. Ya sea para realizar una reserva, resolver dudas o
+            brindarle asistencia durante su estancia, estamos aquí para ayudarle
+            en todo momento. ¡Contáctenos cuando lo necesite!
+        </p>
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 p-8">
-            <Card title="Whatsapp" description="Escribenos por whatsapp a nuestro Celular: (+57) 316 482 4343">
+            <Card
+                title="Whatsapp"
+                description="Escribenos por whatsapp a nuestro celular"
+            >
                 <i slot="icon">
-                    <Whatsapp/>
+                    <Whatsapp />
                 </i>
+                <a
+                    slot="action"
+                    href="https://api.whatsapp.com/send?phone=573164824343&text=GranHotel"
+                    >(+57) 316 482 4343</a
+                >
             </Card>
-            <Card title="Telefono fijo" description="Llama a nuestro linea telefónica fija (+57)(604) 513 44 55">
+            <Card
+                title="Telefono fijo"
+                description="Llama a nuestro linea telefónica fija"
+            >
                 <i slot="icon">
-                    <Telephone/>
+                    <Telephone />
                 </i>
+                <a slot="action" href="tel:576045134455">(+57)(604) 513 44 55</a>
             </Card>
-            <Card title="Mail" description="Escribenos un correo a reservas@granhotel.com.co ó mercadeo@granhotel.com.co">
-                <i slot="icon">
-                    <Mail/>
+            <Card
+                title="Mail"
+                description="Escribenos un correo"
+            >
+                <i slot="icon" class="text-black">
+                    <Mail />
                 </i>
+                <div slot="action">
+                    <a href="mailto:reservas@granhotel.com.co"
+                        >reservas@granhotel.com.co</a
+                    >
+                    <a href="mailto:mercadeo@granhotel.com.co"
+                        >mercadeo@granhotel.com.co</a
+                    >
+                </div>
             </Card>
-            <Card title="Visitanos" description="Visita nuestro hotel ubicado a un paso del centro de la ciudad. Calle 54 No 45 92. Medellín - Colombia - S.A.">
+            <Card
+                title="Visitanos"
+                description="Visita nuestro hotel ubicado a un paso del centro de la ciudad."
+            >
                 <i slot="icon">
-                    <LocationOn/>
+                    <LocationOn width="30" height="30" />
                 </i>
+
+                <a slot="action">Calle 54 No 45 92. Medellín - Colombia - S.A.</a>
             </Card>
         </div>
     </article>
