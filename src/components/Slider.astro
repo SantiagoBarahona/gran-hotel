@@ -4,18 +4,23 @@ interface Props {
 }
 
 const { imagesUrl } = Astro.props;
-
 ---
 
 <!-----
 TODO COnfiguar correctamente el slide de los botones, poner un div con un width fijo y obtener el ancho de este
 --- -->
-<div class="relative rounded-lg overflow-hidden h-full shadow-lg shadow-black-700">
+<div
+    class="relative rounded-lg overflow-hidden h-full shadow-lg shadow-black-700"
+>
     <div
         class="controls absolute flex w-full h-full justify-between items-center z-10"
     >
-        <button id="scroll-left-button" class="slider-button"> &#10094; </button>
-        <button id="scroll-right-button" class="slider-button">&#10095; </button>
+        <button id="scroll-left-button" class="slider-button">
+            &#10094;
+        </button>
+        <button id="scroll-right-button" class="slider-button"
+            >&#10095;
+        </button>
     </div>
     <div class="slider">
         {
@@ -80,53 +85,65 @@ TODO COnfiguar correctamente el slide de los botones, poner un div con un width 
 </style>
 
 <script>
-    const slider = document.querySelector(".slider") as HTMLDivElement;
-    const controls = document.querySelector(".controls") as HTMLDivElement;
-    const sliderWidth = slider?.clientWidth as number;
-    const images = document.querySelectorAll(".slider > img");
+    document.addEventListener("astro:page-load", () => {
+        const slider = document.querySelector(".slider") as HTMLDivElement;
+        const controls = document.querySelector(".controls") as HTMLDivElement;
+        const sliderWidth = slider?.clientWidth as number;
+        const images = document.querySelectorAll(".slider > img");
 
-    const scrollLeftButton = document.getElementById("scroll-left-button");
-    const scrollRightButton = document.getElementById("scroll-right-button");
+        const scrollLeftButton = document.getElementById("scroll-left-button");
+        const scrollRightButton = document.getElementById(
+            "scroll-right-button",
+        );
 
-    let isMouseOverSlider = false;
+        let isMouseOverSlider = false;
 
-    controls.addEventListener("mouseenter", () => {
-        isMouseOverSlider = true;
-    });
-
-    controls.addEventListener("mouseleave", () => {
-        isMouseOverSlider = false;
-    });
-
-    const scrollLeft = () => {
-        const left = slider.scrollLeft == 0 ? slider.clientWidth * images.length : slider.scrollLeft - sliderWidth;
-        slider?.scrollTo({
-            left: left,
-            behavior: "smooth",
+        controls.addEventListener("mouseenter", () => {
+            isMouseOverSlider = true;
         });
-    };
 
-    const scrollRight = () => {
-        let left = slider.scrollLeft + sliderWidth;
-        if (slider.scrollLeft + sliderWidth > slider.clientWidth * (images.length - 1)) {
-            left = 0;
-        }
-        slider?.scrollTo({
-            left: left,
-            behavior: "smooth",
+        controls.addEventListener("mouseleave", () => {
+            isMouseOverSlider = false;
         });
-    };
 
-    scrollLeftButton?.addEventListener("click", scrollLeft);
-    scrollRightButton?.addEventListener("click", scrollRight);
+        const scrollLeft = () => {
+            const left =
+                slider.scrollLeft == 0
+                    ? slider.clientWidth * images.length
+                    : slider.scrollLeft - sliderWidth;
+            slider?.scrollTo({
+                left: left,
+                behavior: "smooth",
+            });
+        };
 
-    function automaticScroll() {
-        console.log("excuted")
-        if (!isMouseOverSlider) {
-            scrollRight();
+        const scrollRight = () => {
+            let left = slider.scrollLeft + sliderWidth;
+            if (
+                slider.scrollLeft + sliderWidth >
+                slider.clientWidth * (images.length - 1)
+            ) {
+                left = 0;
+            }
+            slider?.scrollTo({
+                left: left,
+                behavior: "smooth",
+            });
+        };
+
+        scrollLeftButton?.addEventListener("click", scrollLeft);
+        scrollRightButton?.addEventListener("click", scrollRight);
+
+        function automaticScroll() {
+            console.log("excuted");
+            if (!isMouseOverSlider) {
+                scrollRight();
+            }
+            setTimeout(() => {
+                automaticScroll();
+            }, 4000);
         }
-        setTimeout(() => { automaticScroll(); }, 4000);
-    }
 
-    automaticScroll();
+        automaticScroll();
+    });
 </script>
