@@ -12,12 +12,12 @@ const roomData = [
 ];
 ---
 
-<section class="py-4" id="habitaciones">
+<section class="py-4 px-section" id="habitaciones">
     <h2 class="text-4xl text-center">
         <span class="inline"
             ><strong>Habitaciones</strong></span>
     </h2>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
         {
             roomData.map(room => (
                 <RoomCard
