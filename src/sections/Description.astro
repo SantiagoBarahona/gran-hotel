@@ -6,34 +6,70 @@ import Restaurant from "@/atoms/icons/Restaurant.astro";
 import Card from "@/components/Card.astro";
 ---
 
-<section aria-label="Descubre medellín desde el corazón de la ciudad" class="px-section py-4">
+<section
+    aria-label="Descubre medellín desde el corazón de la ciudad"
+    class="px-section py-4"
+>
     <div class="grid lg:grid-cols-3 gap-4">
-        <Card
-            title="Ubicación Estratégica"
-            description="Ubicado en el centro de la ciudad, a solo minutos de la emblemática Plaza Botero y el Museo de Antioquia. A solo cinco minutos de dos estaciones del metro. Disfruta una excelente oferta gastronómica en los alrededores y la cercanía al Centro Comercial Camino Real."
-        >
+        <Card title="Ubicación Estratégica">
+            <div slot="description">
+                <p>
+                    Ubicado en el centro de la ciudad, a solo minutos de la
+                    emblemática Plaza Botero y el Museo de Antioquia.
+                </p>
+                <p>
+                    A solo cinco minutos de dos estaciones del metro. Disfruta
+                    una excelente oferta gastronómica en los alrededores y la
+                    cercanía al Centro Comercial Camino Real.
+                </p>
+            </div>
             <i slot="icon">
                 <LocationOn />
             </i>
         </Card>
-        <Card
-            title="Instalaciones y Servicios"
-            description="Contamos con piscina, zona cardio, parqueadero y salones para eventos. Tenemos 108 habitaciones, algunas con capacidad para familias o grupos de hasta 5 personas diseñadas para ofrecerte el máximo confort y descanso."
-        >
+        <Card title="Instalaciones y Servicios">
             <i slot="icon">
                 <Apartament />
             </i>
+            <div slot="description">
+                <p>
+                    Contamos con piscina, zona cardio, parqueadero y salones
+                    para eventos.
+                </p>
+                <p>
+                    Tenemos 108 habitaciones, algunas con capacidad para
+                    familias o grupos de hasta 5 personas diseñadas para
+                    ofrecerte el máximo confort y descanso.
+                </p>
+            </div>
         </Card>
-        <Card
-            title="Salones de eventos"
-            description="Para una celebración sofisticada, una conferencia corporativa o un evento especial, nuestros espacios se adaptan a cualquier ocasión. Celebra momentos inolvidables en nuestros salones de eventos elegantes, confortables y funcionales. "
-        >
+        <Card title="Salones de eventos">
             <i slot="icon">
                 <Chair />
             </i>
-            <a slot="action" href="/salones" class="text-orange-400 hover:text-indigo-300 transition-colors duration-200">
-                <strong>Haz click para conocer nuestros salones...</strong>
-            </a>
+            <div slot="description">
+                <p>
+                    Para una celebración sofisticada, una conferencia
+                    corporativa o un evento especial.
+                </p>
+                <p>
+                    Nuestros espacios se adaptan a cualquier ocasión. Celebra momentos inolvidables en nuestros salones de eventos
+                    elegantes, confortables y funcionales.
+                </p>
+                <a
+                    href="/salones"
+                    class="text-black transition-colors duration-200 hover:text-red-granhotel"
+                >
+                    <strong>Haz click para conocer nuestros salones...</strong>
+                </a>
+            </div>
         </Card>
     </div>
 </section>
+
+
+<style>
+    div > p:first-child{
+        color: #222
+    }
+</style>
