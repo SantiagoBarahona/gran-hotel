@@ -13,7 +13,8 @@ export default {
 			},
 
 			padding:{
-				'section': '4rem'
+				'section': '4rem',
+				'section-mobile': '2rem'
 			}
 		},
 	},
