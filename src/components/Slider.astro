@@ -9,9 +9,7 @@ const { imagesUrl } = Astro.props;
 <!-----
 TODO COnfiguar correctamente el slide de los botones, poner un div con un width fijo y obtener el ancho de este
 --- -->
-<div
-    class="relative overflow-hidden h-full shadow-lg shadow-black-700"
->
+<div class="relative overflow-hidden h-full shadow-lg shadow-black-700">
     <div
         class="controls absolute flex w-full h-full justify-between items-center z-10"
     >
@@ -86,8 +84,11 @@ TODO COnfiguar correctamente el slide de los botones, poner un div con un width 
 
 <script>
     document.addEventListener("astro:page-load", () => {
-        const slider = document.querySelector(".slider") as HTMLDivElement;
-        const controls = document.querySelector(".controls") as HTMLDivElement;
+        const slider = document.querySelector(".slider");
+        const controls = document.querySelector(".controls");
+
+        if(!slider || !controls) return
+
         const sliderWidth = slider?.clientWidth as number;
         const images = document.querySelectorAll(".slider > img");
 
