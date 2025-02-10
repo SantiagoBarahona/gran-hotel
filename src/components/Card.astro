@@ -1,31 +1,36 @@
 ---
-import Button from '@/atoms/Button.astro';
+import Button from "@/atoms/Button.astro";
 
 interface Props {
     title: string;
-    action?: string
+    action?: string;
 }
 
 const { title, action } = Astro.props;
 ---
 
-<article class="border-2 bg-gray-100 border-slate-300 shadow-md shadow-slate-400 border-solid px-4 py-2">
+<article
+    class="border-2 bg-gray-100 border-slate-300 shadow-md shadow-slate-400 border-solid px-4 py-2"
+>
     <header class="flex items-center gap-x-4 mb-2">
-        <slot name="icon"/>
+        <slot name="icon" />
         <h3 class="text-2xl"><strong>{title}</strong></h3>
     </header>
     <main>
-        <div class="text-zinc-500">
-            <slot name="description">
+        <div class="flex flex-col justify-around">
+            <div class="text-zinc-500">
+                <slot name="description" />
+                {action && <Button>{action}</Button>}
+            </div>
+            <div>
+                <slot name="action" />
+            </div>
         </div>
-        { action && <Button>{action}</Button> }
-        <slot name="action"/>
     </main>
+
+    <style is:inline>
+        p {
+            margin-bottom: 1em;
+        }
+    </style>
 </article>
-
-<style is:inline>
-
-    p{
-        margin-bottom: 1em;
-    }
-</style>
