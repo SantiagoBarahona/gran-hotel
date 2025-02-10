@@ -15,7 +15,7 @@ export default {
 			padding:{
 				'section': '4rem',
 				'section-mobile': '2rem',
-				'section-vertical': '1rem',
+				'section-vertical': '2rem',
 				'section-vertical-mobile': '0.5rem',
 			}
 		},
