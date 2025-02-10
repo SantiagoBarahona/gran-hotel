@@ -21,35 +21,32 @@ import Layout from "@/layouts/Layout.astro";
             en todo momento. ¡Contáctenos cuando lo necesite!
         </p>
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 p-8">
-            <Card
-                title="Whatsapp"
-                description="Escribenos por whatsapp a nuestro celular"
-            >
+            <Card title="Whatsapp">
                 <i slot="icon">
                     <Whatsapp />
                 </i>
+                <p slot="description">
+                    Escribenos por whatsapp a nuestro celular
+                </p>
                 <a
                     slot="action"
                     href="https://api.whatsapp.com/send?phone=573164824343&text=GranHotel"
                     >(+57) 316 482 4343</a
                 >
             </Card>
-            <Card
-                title="Telefono fijo"
-                description="Llama a nuestro linea telefónica fija"
-            >
+            <Card title="Telefono fijo">
                 <i slot="icon">
                     <Telephone />
                 </i>
-                <a slot="action" href="tel:576045134455">(+57)(604) 513 44 55</a>
+                <p slot="description">Llama a nuestro linea telefónica fija</p>
+                <a slot="action" href="tel:576045134455">(+57)(604) 513 44 55</a
+                >
             </Card>
-            <Card
-                title="Mail"
-                description="Escribenos un correo"
-            >
+            <Card title="Mail">
                 <i slot="icon" class="text-black">
                     <Mail />
                 </i>
+                <p slot="description">Escribenos un correo</p>
                 <div slot="action">
                     <a href="mailto:reservas@granhotel.com.co"
                         >reservas@granhotel.com.co</a
@@ -59,15 +56,14 @@ import Layout from "@/layouts/Layout.astro";
                     >
                 </div>
             </Card>
-            <Card
-                title="Visitanos"
-                description="Visita nuestro hotel ubicado a un paso del centro de la ciudad."
-            >
+            <Card title="Visitanos">
                 <i slot="icon">
                     <LocationOn width="30" height="30" />
                 </i>
-
-                <a slot="action">Calle 54 No 45 92. Medellín - Colombia - S.A.</a>
+                <p slot="description">Visita nuestro hotel ubicado a un paso del centro de la ciudad.</p>
+                <a slot="action"
+                    >Calle 54 No 45 92. Medellín - Colombia - S.A.</a
+                >
             </Card>
         </div>
     </article>
