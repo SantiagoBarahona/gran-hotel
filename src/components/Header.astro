@@ -2,8 +2,6 @@
 import Contacts from "./Contacts.astro";
 import Logo from "./Logo.astro";
 
-const currentPathname = Astro.url.pathname;
-
 const links = [
     {
         label: "Inicio",
@@ -41,7 +39,7 @@ const links = [
         <ul class="md:flex text-sm [&>li>a]:px-4 main-ul h-full">
             {
                 links.map((link) => (
-                    <li class="navbar-link">
+                    <li class="navbar-link" id={link.url}>
                         <a
                             href={link.url}
                             class:list={[
@@ -53,7 +51,6 @@ const links = [
                         <div
                             class:list={[
                                 "background",
-                                currentPathname == link.url ? "active" : "",
                             ]}
                         />
                     </li>
@@ -163,6 +160,10 @@ const links = [
 
 <script>
     document.addEventListener("astro:page-load", () => {
+        const currentLinkPath = location.pathname+location.hash
+        const currentLinkSelected = document.getElementById(currentLinkPath)
+        console.log(currentLinkPath, currentLinkSelected)
+        if(currentLinkSelected) currentLinkSelected.classList.add('active')
         const navbarLinks = document.querySelectorAll(".navbar-link");
         navbarLinks.forEach((link) =>
             link.addEventListener("click", () => {
