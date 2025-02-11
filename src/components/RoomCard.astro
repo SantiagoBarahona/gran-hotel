@@ -67,19 +67,20 @@ const { title, capacity, imageSrc, beds } = Astro.props;
 
     .card:hover .corner {
         transition:
-            width 700ms ease-out,
-            height 700ms ease-out,
-            border-color 300ms ease-out;
+            width 500ms ease-in,
+            height 500ms ease-in,
+            border-color 200ms ease-in;
         border-color: #fff;
         width: 50%;
         height: 50%;
     }
 
     .inner {
-        transition: transform 300ms ease;
+        transition: transform 200ms ease-out;
     }
 
     .card:hover .inner {
+        transition-timing-function: ease-in;
         color: #fff !important; 
         transform: scale(.85);
     }
