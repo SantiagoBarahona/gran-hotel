@@ -12,11 +12,11 @@ interface Props {
 const { title, capacity, imageSrc, beds } = Astro.props;
 ---
 
-<div
+<article
     class="card border-2 border-solid border-slate-300 overflow-hidden shadow-md shadow-gray-800 relative transition-colors duration-300 hover:bg-gray-950/90 hover:text-white pb-1"
 >
-    <div class="inner relative z-40">
-        <div
+    <section class="inner relative z-40">
+        <header
             class="mb-2 h-48 w-full overflow-hidden shadow-md shadow-gray-700"
         >
             <img
@@ -25,36 +25,33 @@ const { title, capacity, imageSrc, beds } = Astro.props;
                 loading="lazy"
                 alt={`${title}`}
             />
-        </div>
-        <div>
-            <h3 class="text-center text-xl">{title}</h3>
-            <div class="flex justify-center gap-x-4">
+        </header>
+        <main>
+            <h3 class="text-center text-lg">{title}</h3>
+            <div class="flex justify-center gap-x-4 text-zinc-500">
                 <i class="flex items-center"
-                    ><Person /> <span class="text-xl">{capacity}</span></i
+                    ><Person /> <span class="">{capacity}</span></i
                 >
-                <div class="flex gap-x-1">
+                <div class="flex gap-x-1 text-sm">
                     {
                         beds.map((numberOfBeds, index) => (
                             <>
                                 <i class="flex items-center">
                                     <Bed />{" "}
-                                    <span class="text-xl">{numberOfBeds}</span>
+                                    <span class="">{numberOfBeds}</span>
                                 </i>
-                                {index < beds.length - 1 && (
-                                    <span class="mt-1">ó</span>
-                                )}
                             </>
                         ))
                     }
                 </div>
             </div>
-        </div>
-    </div>
+        </main>
+    </section>
     <div class="corner top-2 left-2 border-t-2 border-l-2"></div>
     <div class="corner top-2 right-2 border-t-2 border-r-2"></div>
     <div class="corner bottom-2 left-2 border-b-2 border-l-2"></div>
     <div class="corner bottom-2 right-2 border-b-2 border-r-2"></div>
-</div>
+</article>
 
 <style>
     .corner {
