@@ -40,28 +40,34 @@ import Card from "@/components/Card.astro";
                 </p>
             </div>
         </Card>
-        <Card title="Salones de eventos">
-            <i slot="icon">
-                <Chair />
-            </i>
-            <div slot="description">
-                <p>
-                    Para una celebración sofisticada, una conferencia
-                    corporativa o un evento especial.
-                </p>
-                <p>
-                    Nuestros espacios se adaptan a cualquier ocasión. Celebra
-                    momentos inolvidables en nuestros salones de eventos
-                    elegantes, confortables y funcionales.
-                </p>
-                <a
-                    href="/salones"
-                    class="text-black transition-colors duration-200 hover:text-red-granhotel"
+        <div class="relative w-full h-full bg-red-100">
+            <a
+                href="/salones"
+                class="text-white text-sm transition-colors duration-200"
+            >
+                <div
+                    class="absolute w-[90px] h-[90px] rounded-full shadow-md shadow-slate-600 bg-red-granhotel/80 -right-5 -top-5 flex items-center text-center hover:scale-110 transition-transform duration-100 hover:ease-in ease-out"
                 >
-                    <strong>Haz click para conocer nuestros salones...</strong>
-                </a>
-            </div>
-        </Card>
+                    <strong>¡Conoce nuestros salones!</strong>
+                </div>
+            </a>
+            <Card title="Salones de eventos">
+                <i slot="icon">
+                    <Chair />
+                </i>
+                <div slot="description">
+                    <p>
+                        Para una celebración sofisticada, una conferencia
+                        corporativa o un evento especial.
+                    </p>
+                    <p>
+                        Nuestros espacios se adaptan a cualquier ocasión.
+                        Celebra momentos inolvidables en nuestros salones de
+                        eventos elegantes, confortables y funcionales.
+                    </p>
+                </div>
+            </Card>
+        </div>
     </div>
 </section>
 
