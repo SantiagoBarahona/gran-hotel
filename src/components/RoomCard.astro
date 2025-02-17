@@ -27,22 +27,24 @@ const { title, capacity, imageSrc, beds } = Astro.props;
             />
         </header>
         <main>
-            <h3 class="text-center text-lg">{title}</h3>
-            <div class="flex justify-center gap-x-4 text-zinc-500">
-                <i class="flex items-center"
-                    ><Person /> <span class="">{capacity}</span></i
-                >
-                <div class="flex gap-x-1 text-sm">
-                    {
-                        beds.map((numberOfBeds, index) => (
-                            <>
-                                <i class="flex items-center">
-                                    <Bed />{" "}
-                                    <span class="">{numberOfBeds}</span>
-                                </i>
-                            </>
-                        ))
-                    }
+            <div class="flex justify-between items-center mx-2">
+                <h3 class="text-center text-lg">{title}</h3>
+                <div class="flex justify-center gap-x-2">
+                    <i class="flex items-center"
+                        ><Person /> <span class="">{capacity}</span></i
+                    >
+                    <div class="flex gap-x-1 text-sm">
+                        {
+                            beds.map((numberOfBeds, index) => (
+                                <>
+                                    <i class="flex items-center">
+                                        <Bed />{" "}
+                                        <span class="">{numberOfBeds}</span>
+                                    </i>
+                                </>
+                            ))
+                        }
+                    </div>
                 </div>
             </div>
         </main>
@@ -78,7 +80,7 @@ const { title, capacity, imageSrc, beds } = Astro.props;
 
     .card:hover .inner {
         transition-timing-function: ease-in;
-        color: #fff !important; 
-        transform: scale(.85);
+        color: #fff !important;
+        transform: scale(0.85);
     }
 </style>
