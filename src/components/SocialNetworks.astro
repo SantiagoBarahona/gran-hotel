@@ -2,29 +2,25 @@
 import Facebook from "@/atoms/icons/Facebook.astro";
 import Instagram from "@/atoms/icons/Instagram.astro";
 import Location from "@/atoms/icons/Location.astro";
-
 ---
 
-<div
-    id="social-networks"
-    class="flex gap-3"
->
-    <a href="https://www.facebook.com/granhotelmedellin">
-        <i><Facebook /></i>
-    </a>
+<div id="social-networks" class="flex gap-3">
+  <a href="https://www.facebook.com/granhotelmedellin">
+    <i><Facebook /></i>
+  </a>
 
-    <a href="https://www.instagram.com/gran_hotel_medellin/">
-        <i><Instagram /></i>
-    </a>
+  <a href="https://www.instagram.com/gran_hotel_medellin/">
+    <i><Instagram /></i>
+  </a>
 </div>
 
 <style>
-    #social-networks > a {
-        transition: scale ease 400ms;
-    }
+  #social-networks > a {
+    transition: scale ease-out 100ms;
+  }
 
-    #social-networks > a:hover {
-        scale: 1.10;
-        transition-duration: 200ms;
-    }
+  #social-networks > a:hover {
+    scale: 1.1;
+    transition-timing-function: ease-in;
+  }
 </style>
