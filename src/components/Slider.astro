@@ -13,7 +13,7 @@ const { imagesUrl } = Astro.props;
     <button id="scroll-left-button" class="slider-button"> &#10094; </button>
     <button id="scroll-right-button" class="slider-button">&#10095; </button>
   </div>
-  <div class="slider h-full">
+  <div class="slider">
     {
       imagesUrl?.map((imageSrc, index) => (
         <img
