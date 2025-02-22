@@ -6,7 +6,7 @@ interface Props {
 const { imagesUrl } = Astro.props;
 ---
 
-<div class="relative overflow-hidden h-full shadow-lg shadow-black-700">
+<div class="relative h-full max-h-80 shadow-lg shadow-black-700">
   <div
     class="controls absolute flex w-full h-full justify-between items-center z-10"
   >
@@ -60,12 +60,12 @@ const { imagesUrl } = Astro.props;
     box-shadow: 1px 4px 4px #333;
     border: 2px solid transparent;
     transition:
-      scale 0.25s ease,
-      border 0.25s linear,
-      background-color 2s;
+      scale 100ms ease-out,
+      border 100ms ease-out;
   }
 
   .slider-button:enabled:hover {
+    transition-timing-function: ease-in;
     scale: 120%;
     border: 2px solid #fff;
   }
