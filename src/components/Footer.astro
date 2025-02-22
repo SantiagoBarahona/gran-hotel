@@ -6,68 +6,61 @@ import CCT from "@/atoms/icons/CCT.astro";
 ---
 
 <footer class="w-100 bg-slate-950/90 px-section-mobile md:px-section">
-    <div
-        class="flex flex-wrap pt-4 gap-10 footer-container max-sm:justify-center [&>div]:max-sm:flex-grow last:[&>div]:max-sm:mb-8"
-    >
-        <div id="links" class="flex flex-wrap flex-col gap-1 text-white">
-            <p class="text-2xl title">Contáctanos</p>
-            <a
-                href="https://api.whatsapp.com/send?phone=573164824343&text=GranHotel"
-                >Celular: (+57) 316 482 4343</a
-            >
-            <a href="tel:576045134455">Teléfono fijo: (+57)(604) 513 44 55</a>
-            <a href="mailto:reservas@granhotel.com.co"
-                >reservas@granhotel.com.co</a
-            >
-            <a href="mailto:mercadeo@granhotel.com.co"
-                >mercadeo@granhotel.com.co</a
-            >
-        </div>
-
-        <div id="links" class="flex flex-wrap flex-col gap-1 text-white">
-            <p class="text-2xl title">Enlaces importantes</p>
-            <a href="./escnna">Política ESCNNA</a>
-            <a href="./privacidad">Política de privacidad</a>
-            <a href="./sostenibilidad">Política de sostenibilidad</a>
-            <a href="https://www.sedecampestre.com/" class="text-green-400">Vistia Gran Tierra</a>
-        </div>
-
-        <div class="flex flex-wrap flex-col gap-1 text-white">
-            <p class="text-2xl title">Redes sociales</p>
-            <SocialNetworks />
-        </div>
-
-        <div class="flex gap-5 flex-grow justify-end items-end pb-4">
-            <TheCoderOrg />
-            <CCT />
-            <Cotelco />
-        </div>
+  <div
+    class="flex flex-wrap pt-4 gap-10 footer-container max-sm:justify-center [&>div]:max-sm:flex-grow last:[&>div]:max-sm:mb-8"
+  >
+    <div id="links" class="flex flex-wrap flex-col gap-1 text-white">
+      <p class="text-2xl title">Contáctanos</p>
+      <a href="https://api.whatsapp.com/send?phone=573164824343&text=GranHotel"
+        >Celular: (+57) 316 482 4343</a
+      >
+      <a href="tel:576045134455">Teléfono fijo: (+57)(604) 513 44 55</a>
+      <a href="mailto:reservas@granhotel.com.co">reservas@granhotel.com.co</a>
+      <a href="mailto:mercadeo@granhotel.com.co">mercadeo@granhotel.com.co</a>
     </div>
 
-    <p class="text-sm text-slate-200 text-center pb-1">
-        Calle 54 No 45 92. Medellín - Colombia - S.A.
-    </p>
+    <div id="links" class="flex flex-wrap flex-col gap-1 text-white">
+      <p class="text-2xl title">Enlaces importantes</p>
+      <a href="./escnna">Política ESCNNA</a>
+      <a href="./privacidad">Política de privacidad</a>
+      <a href="./sostenibilidad">Política de sostenibilidad</a>
+      <a href="https://www.sedecampestre.com/" class="text-green-400"
+        >Vistia Gran Tierra</a
+      >
+    </div>
 
-    <p class="text-xs text-slate-200 text-center">
-        Copyright © 2025 Gran Hotel
-    </p>
+    <div class="flex flex-wrap flex-col gap-1 text-white">
+      <p class="text-2xl title">Redes sociales</p>
+      <SocialNetworks />
+    </div>
+
+    <div class="flex gap-5 flex-grow justify-end items-end pb-4">
+      <TheCoderOrg />
+      <CCT />
+      <Cotelco />
+    </div>
+  </div>
+
+  <p class="text-sm text-slate-200 text-center pb-1">
+    Calle 54 No 45 92. Medellín - Colombia - S.A.
+  </p>
+
+  <p class="text-xs text-slate-200 text-center">Copyright © 2025 Gran Hotel</p>
 </footer>
 
 <style>
-    #links > a {
-        transition: color 400ms ease;
-    }
+  #links > a {
+    transition: color 100ms ease-out;
+  }
 
-    #links > a:hover {
-        transition: color 200ms ease;
-        color: orange;
+  #links > a:hover {
+    transition-timing-function: ease-in;
+    color: orange;
+  }
 
-    }
-
-    .title {
-        padding-bottom: 0.5rem;
-        margin-bottom: 0.75rem;
-        border-bottom: 2px solid orange;
-    }
-
+  .title {
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
+    border-bottom: 2px solid orange;
+  }
 </style>
