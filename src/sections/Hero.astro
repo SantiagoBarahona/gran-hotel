@@ -4,31 +4,32 @@ import Slider from "@/components/Slider.astro";
 import { homeSliderImages } from "@/data/slider.data";
 ---
 
-<section class="w-screen h-full relative overflow-hidden pt-20 bg-gradient-to-b from-black to-black/85" id="inicio">
-	<div class="grid md:grid-cols-2 w-full h-full pt-16 gap-4 ">
-		<div class="flex flex-col gap-8">
-			<div class="lg:m-auto lg:text-center">
-				<h1 class="text-4xl md:text-5xl text-white">
-					<strong class="w-full">
-						Descubre Medellín desde el centro en <span
-							class="text-orange-400">Gran Hotel</span
-						>
-					</strong>
-				</h1>
-				<h2 class="text-xl mt-1 text-blue-300">
-					Confort y elegancia te esperan
-				</h2>
-				<Button style="red" href="/reserva" class="mt-4 lg:mx-auto">Reservar ahora</Button>
-			</div>
-		</div>
-		<div
-			class="w-full h-96 overflow-hidden shadow-lg shadow-black "
-		>
-			<Slider imagesUrl={homeSliderImages} />
-		</div>
-	</div>
+<section
+  class="w-screen h-full relative overflow-hidden pt-20 bg-gradient-to-b from-black to-black/85"
+  id="inicio"
+>
+  <div class="grid md:grid-cols-2 w-full h-full pt-16 gap-4">
+    <div class="flex flex-col gap-8">
+      <div class="lg:m-auto lg:text-center">
+        <h1 class="text-4xl md:text-5xl text-white">
+          <strong class="w-full">
+            Descubre Medellín desde el centro en <span class="text-orange-400"
+              >Gran Hotel</span
+            >
+          </strong>
+        </h1>
+        <h2 class="text-xl mt-1 text-blue-300">
+          Confort y elegancia te esperan
+        </h2>
+        <Button style="red" href="/reserva" class="mt-4 lg:mx-auto"
+          >Reservar ahora</Button
+        >
+      </div>
+    </div>
+    <div class="w-full h-96 overflow-hidden shadow-lg shadow-black">
+      <Slider imagesUrl={homeSliderImages} />
+    </div>
+  </div>
 </section>
 
-<style>
-	
-</style>
+<style></style>
