@@ -1,149 +1,140 @@
 ---
 interface Props {
-    imagesUrl: string[];
+  imagesUrl: string[];
 }
 
 const { imagesUrl } = Astro.props;
 ---
 
-<!-----
-TODO COnfiguar correctamente el slide de los botones, poner un div con un width fijo y obtener el ancho de este
---- -->
 <div class="relative overflow-hidden h-full shadow-lg shadow-black-700">
-    <div
-        class="controls absolute flex w-full h-full justify-between items-center z-10"
-    >
-        <button id="scroll-left-button" class="slider-button">
-            &#10094;
-        </button>
-        <button id="scroll-right-button" class="slider-button"
-            >&#10095;
-        </button>
-    </div>
-    <div class="slider">
-        {
-            imagesUrl?.map((imageSrc, index) => (
-                <img
-                    class="w-full"
-                    src={imageSrc}
-                    alt={`Imagen del slider numero ${index}`}
-                    loading="lazy"
-                />
-            ))
-        }
-    </div>
+  <div
+    class="controls absolute flex w-full h-full justify-between items-center z-10"
+  >
+    <button id="scroll-left-button" class="slider-button"> &#10094; </button>
+    <button id="scroll-right-button" class="slider-button">&#10095; </button>
+  </div>
+  <div class="slider">
+    {
+      imagesUrl?.map((imageSrc, index) => (
+        <img
+          class="w-full"
+          src={imageSrc}
+          alt={`Imagen del slider numero ${index}`}
+          loading="lazy"
+        />
+      ))
+    }
+  </div>
 </div>
 
 <style>
-    .slider {
-        width: 100%;
-        max-height: 100%;
-        position: relative;
-        display: flex;
-        overflow: scroll;
-        scroll-snap-type: x mandatory;
-        scrollbar-width: none;
-    }
+  .slider {
+    width: 100%;
+    max-height: 100%;
+    position: relative;
+    display: flex;
+    overflow: scroll;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
 
-    .slider img {
-        width: 100%;
-        left: 0;
-        position: sticky;
-        object-fit: cover;
-        scroll-snap-align: center;
-    }
+  .slider img {
+    width: 100%;
+    left: 0;
+    position: sticky;
+    object-fit: cover;
+    scroll-snap-align: center;
+  }
 
-    .slider-button {
-        width: 50px;
-        height: 50px;
-        font-size: 1.5rem;
-        padding: 0.25rem;
-        color: #fff;
-        background-color: #22222260;
-        backdrop-filter: blur(10px);
-        margin-left: 1rem;
-        margin-right: 1rem;
-        border-radius: 50%;
-        box-shadow: 1px 4px 4px #333;
-        border: 2px solid transparent;
-        transition:
-            scale 0.25s ease,
-            border 0.25s linear,
-            background-color 2s;
-    }
+  .slider-button {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    padding: 0.25rem;
+    color: #fff;
+    background-color: #22222260;
+    backdrop-filter: blur(10px);
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-radius: 50%;
+    box-shadow: 1px 4px 4px #333;
+    border: 2px solid transparent;
+    transition:
+      scale 0.25s ease,
+      border 0.25s linear,
+      background-color 2s;
+  }
 
-    .slider-button:enabled:hover {
-        scale: 120%;
-        border: 2px solid #fff;
-    }
+  .slider-button:enabled:hover {
+    scale: 120%;
+    border: 2px solid #fff;
+  }
 
-    .slider-button:disabled {
-        opacity: 0.3;
-    }
+  .slider-button:disabled {
+    opacity: 0.3;
+  }
 </style>
 
 <script>
-    document.addEventListener("astro:page-load", () => {
-        const slider = document.querySelector(".slider");
-        const controls = document.querySelector(".controls");
+  document.addEventListener("astro:page-load", () => {
+    const slider = document.querySelector(".slider");
+    const controls = document.querySelector(".controls");
 
-        if(!slider || !controls) return
+    if (!slider || !controls) return;
 
-        const sliderWidth = slider?.clientWidth as number;
-        const images = document.querySelectorAll(".slider > img");
+    const sliderWidth = slider?.clientWidth as number;
+    const images = document.querySelectorAll(".slider > img");
 
-        const scrollLeftButton = document.getElementById("scroll-left-button");
-        const scrollRightButton = document.getElementById(
-            "scroll-right-button",
-        );
+    const scrollLeftButton = document.getElementById("scroll-left-button");
+    const scrollRightButton = document.getElementById("scroll-right-button");
 
-        let isMouseOverSlider = false;
+    let isMouseOverSlider = false;
 
-        controls.addEventListener("mouseenter", () => {
-            isMouseOverSlider = true;
-        });
-
-        controls.addEventListener("mouseleave", () => {
-            isMouseOverSlider = false;
-        });
-
-        const scrollLeft = () => {
-            const left =
-                slider.scrollLeft == 0
-                    ? slider.clientWidth * images.length
-                    : slider.scrollLeft - sliderWidth;
-            slider?.scrollTo({
-                left: left,
-                behavior: "smooth",
-            });
-        };
-
-        const scrollRight = () => {
-            let left = slider.scrollLeft + sliderWidth;
-            if (
-                slider.scrollLeft + sliderWidth >
-                slider.clientWidth * (images.length - 1)
-            ) {
-                left = 0;
-            }
-            slider?.scrollTo({
-                left: left,
-                behavior: "smooth",
-            });
-        };
-
-        scrollLeftButton?.addEventListener("click", scrollLeft);
-        scrollRightButton?.addEventListener("click", scrollRight);
-
-        function automaticScroll() {
-            if (!isMouseOverSlider) {
-                scrollRight();
-            }
-            setTimeout(() => {
-                automaticScroll();
-            }, 4000);
-        }
-
-        automaticScroll();
+    controls.addEventListener("mouseenter", () => {
+      isMouseOverSlider = true;
     });
+
+    controls.addEventListener("mouseleave", () => {
+      isMouseOverSlider = false;
+    });
+
+    const scrollLeft = () => {
+      const left =
+        slider.scrollLeft == 0
+          ? slider.clientWidth * images.length
+          : slider.scrollLeft - sliderWidth;
+      slider?.scrollTo({
+        left: left,
+        behavior: "smooth",
+      });
+    };
+
+    const scrollRight = () => {
+      let left = slider.scrollLeft + sliderWidth;
+      if (
+        slider.scrollLeft + sliderWidth >
+        slider.clientWidth * (images.length - 1)
+      ) {
+        left = 0;
+      }
+      slider?.scrollTo({
+        left: left,
+        behavior: "smooth",
+      });
+    };
+
+    scrollLeftButton?.addEventListener("click", scrollLeft);
+    scrollRightButton?.addEventListener("click", scrollRight);
+
+    function automaticScroll() {
+      if (!isMouseOverSlider) {
+        scrollRight();
+      }
+      setTimeout(() => {
+        automaticScroll();
+      }, 4000);
+    }
+
+    automaticScroll();
+  });
 </script>
