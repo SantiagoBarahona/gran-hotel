@@ -3,33 +3,62 @@ import Button from "@/atoms/Button.astro";
 import RoomCard from "@/components/RoomCard.astro";
 
 const roomData = [
-    { title: "Habitacion indiviudal", capacity: 1, beds: [1], imageSrc: "/habitaciones/individual/1.avif" },
-    { title: "Habitacion doble", capacity: 2, beds: [1, 2], imageSrc: "/habitaciones/doble/1.jpg" },
-    { title: "Habitacion triple", capacity: 3, beds: [2,3], imageSrc: "/habitaciones/triple/1.avif" },
-    { title: "Habitacion cuádruple", capacity: 4, beds: [2, 3], imageSrc: "/habitaciones/cuadruple/1.avif" },
-    { title: "Habitacion doble superior", capacity: 2, beds: [1], imageSrc: "/habitaciones/doble-superior/1.avif" },
-    { title: "Habitacion familiar", capacity: 5, beds: [4, 5], imageSrc: "/habitaciones/familiar/1.jpg" }
+  {
+    title: "Habitacion indiviudal",
+    capacity: 1,
+    beds: [1],
+    imageSrc: "/habitaciones/individual/1.avif",
+  },
+  {
+    title: "Habitacion doble",
+    capacity: 2,
+    beds: [1, 2],
+    imageSrc: "/habitaciones/doble/1.jpg",
+  },
+  {
+    title: "Habitacion triple",
+    capacity: 3,
+    beds: [2, 3],
+    imageSrc: "/habitaciones/triple/1.avif",
+  },
+  {
+    title: "Habitacion cuádruple",
+    capacity: 4,
+    beds: [2, 3],
+    imageSrc: "/habitaciones/cuadruple/1.avif",
+  },
+  {
+    title: "Habitacion doble superior",
+    capacity: 2,
+    beds: [1],
+    imageSrc: "/habitaciones/doble-superior/1.avif",
+  },
+  {
+    title: "Habitacion familiar",
+    capacity: 5,
+    beds: [4, 5],
+    imageSrc: "/habitaciones/familiar/1.jpg",
+  },
 ];
 ---
 
 <section id="habitaciones">
-    <h2 class="text-4xl text-center mb-2">
-        <span class="inline"
-            ><strong>Habitaciones</strong></span>
-    </h2>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {
-            roomData.map(room => (
-                <RoomCard
-                    title={room.title}
-                    capacity={room.capacity}
-                    beds={room.beds}
-                    imageSrc={room.imageSrc}
-                />
-            ))
-        }
-    </div>
-    <div class="my-4">
-        <Button class="m-auto" style="slate" href="/reserva">Reservar ahora</Button>
-    </div>
+  <h2 class="text-4xl text-center mb-2">
+    <span class="inline"><strong>Habitaciones</strong></span>
+  </h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+    {
+      roomData.map((room) => (
+        <RoomCard
+          title={room.title}
+          capacity={room.capacity}
+          beds={room.beds}
+          imageSrc={room.imageSrc}
+        />
+      ))
+    }
+  </div>
+  <div class="py-4">
+    <Button class="m-auto" style="slate" href="/reserva">Reservar ahora</Button>
+  </div>
 </section>

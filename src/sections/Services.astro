@@ -4,27 +4,45 @@ import Screen from "@/components/Screen.astro";
 ---
 
 <section class="bg-slate-200" id="servicios">
-    <h2 class="text-4xl text-center mb-4">
-        <span class="inline px-4"
-            ><strong>Servicios</strong></span
-        >
-    </h2>
-    <p class="text-sm md:text-center text-gray-700 mb-4">
-        Desde habitaciones elegantes y gastronomía de primer nivel hasta
-        gimnasio, piscina y salones para eventos, todo está pensado para una
-        estancia única.
-    </p>
-    <div class="w-full h-auto m-auto grid lg:grid-cols-2 gap-4">
-        <Screen title="Restaurante de oro" imageUrl="/servicios/restaurante.webp" description="En nuestro restaurante la elegancia del hotel se mezcla con sabores exquisitos y un ambiente inolvidable. ¡Déjate sorprender!"/>
-        <Screen title="Salones para eventos" imageUrl="/salones/oro/1.webp" description="Celebra tus momentos especiales en un espacio elegante, con servicio impecable y detalles que hacen la diferencia.">
-            <a href="/salones" class="text-blue-300 hover:text-white transition-colors duration-200">
-                <strong>Haz click para conocer nuestros salones...</strong>
-            </a>
-        </Screen>        
-        <Screen title="Zona húmeda" imageUrl="/servicios/piscina.webp" description="Sumérgete en la tranquilidad de nuestra piscina, el lugar perfecto para relajarte y disfrutar."/>
-        <Screen title="Zona cardio" imageUrl="/servicios/cardio.webp" description="Ejercítate en nuestra agradable área de cardio, un lugar diseñado para brindarte comodidad y armonía mientras te mueves al ritmo de tu cuerpo."/>
-    </div>
-    <Button href="/servicios" class="mt-4 mx-auto" style="slate"
-        >Conoce todos nuestros servicios</Button
+  <h2 class="text-4xl text-center mb-4">
+    <span class="inline px-4"><strong>Servicios</strong></span>
+  </h2>
+  <p class="text-sm md:text-center text-gray-700 mb-4">
+    Desde habitaciones elegantes y gastronomía de primer nivel hasta gimnasio,
+    piscina y salones para eventos, todo está pensado para una estancia única.
+  </p>
+  <div class="w-full h-auto m-auto grid lg:grid-cols-2 gap-4">
+    <Screen
+      title="Restaurante de oro"
+      imageUrl="/servicios/restaurante.webp"
+      description="En nuestro restaurante la elegancia del hotel se mezcla con sabores exquisitos y un ambiente inolvidable. ¡Déjate sorprender!"
+    />
+    <Screen
+      title="Salones para eventos"
+      imageUrl="/salones/oro/1.webp"
+      description="Celebra tus momentos especiales en un espacio elegante, con servicio impecable y detalles que hacen la diferencia."
     >
+      <a
+        href="/salones"
+        class="text-blue-300 hover:text-white transition-colors duration-200"
+      >
+        <strong>Haz click para conocer nuestros salones...</strong>
+      </a>
+    </Screen>
+    <Screen
+      title="Zona húmeda"
+      imageUrl="/servicios/piscina.webp"
+      description="Sumérgete en la tranquilidad de nuestra piscina, el lugar perfecto para relajarte y disfrutar."
+    />
+    <Screen
+      title="Zona cardio"
+      imageUrl="/servicios/cardio.webp"
+      description="Ejercítate en nuestra agradable área de cardio, un lugar diseñado para brindarte comodidad y armonía mientras te mueves al ritmo de tu cuerpo."
+    />
+  </div>
+  <div class="py-4">
+    <Button href="/servicios" class="mx-auto" style="slate"
+      >Conoce todos nuestros servicios</Button
+    >
+  </div>
 </section>
