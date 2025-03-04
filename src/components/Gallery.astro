@@ -9,7 +9,7 @@ const { title, imagesUrl } = Astro.props;
 
 <h2 class="text-center text-3xl text-red-500 mb-4 slide-in-lr">{title}</h2>
 <div
-  class="gallery grid sm:grid-cols-2 lg:grid-cols-3 mx-auto [&>div]:mb-4 gap-4 px-4 mb-8"
+  class="gallery grid sm:grid-cols-2 lg:grid-cols-2 mx-auto [&>div]:mb-4 gap-4 px-4 mb-8"
 >
   {
     imagesUrl.map((imageUrl, index) => (
