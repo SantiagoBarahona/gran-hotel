@@ -1,33 +1,40 @@
 ---
-interface Props{
-    imageUrl: string
-    title: string
-    subtitle?: string
-    description?: string
+interface Props {
+  imageUrl: string;
+  title: string;
+  subtitle?: string;
+  description?: string;
 }
 
-const {imageUrl, title, subtitle, description} = Astro.props
+const { imageUrl, title, subtitle, description } = Astro.props;
 ---
 
 <div class="relative snap-start overflow-hidden main-container">
-    <div class="absolute w-full h-full flex flex-col items-center top-0 z-10">
-        <div class="p-4 bg-slate-950/80 h-full w-full flex">
-            <div class="flex flex-col">
-                <h2 class="text-3xl text-orange-400">{title}</h2>
-                <h2 class="text-2xl text-slate-300">{subtitle}</h2>
-                <p class="text-sm text-slate-200 max-w-xl">{description}</p>
-                <div class="mt-auto">
-                    <slot/>
-                </div>
-            </div>
+  <div class="absolute w-full h-full flex flex-col items-center top-0 z-10">
+    <div
+      class="p-4 h-full w-full flex
+        bg-gradient-to-b from-black/70 from-40% via-black/10 to-transparent"
+    >
+      <div class="flex flex-col">
+        <h2 class="text-3xl text-orange-400">{title}</h2>
+        <h2 class="text-2xl text-slate-300">{subtitle}</h2>
+        <p class="text-sm text-slate-200 max-w-xl">{description}</p>
+        <div class="mt-auto">
+          <slot />
         </div>
+      </div>
     </div>
-    <img src={imageUrl} class="h-48 w-full object-cover object-center transition-transform duration-200 hover:ease-in ease-out" alt={title}>
+  </div>
+  <img
+    src={imageUrl}
+    class="h-52 w-full object-cover object-center transition-transform duration-200 hover:ease-in ease-out"
+    alt={title}
+  />
 </div>
 
 <style>
-    .main-container:hover > img{
-        transform: scale(1.10);
-        z-index: -10;
-    }
+  .main-container:hover > img {
+    transform: scale(1.1);
+    z-index: -10;
+  }
 </style>
