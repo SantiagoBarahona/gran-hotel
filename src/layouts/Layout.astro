@@ -3,9 +3,10 @@ import Footer from "@/components/Footer.astro";
 import Header from "@/components/Header.astro";
 import ClientRouter from "astro/components/ClientRouter.astro";
 import SpeedInsights from "@vercel/speed-insights/astro";
+import Analytics from "@vercel/analytics/astro";
 
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -13,80 +14,84 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="es">
-	<head>
-		<meta name="description" content="Gran Hotel está ubicada en el centro de Medellín, disfruta de nuestras elegantes instalaciones diseñadas para brindarte la mejor experiencia"/>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{`Gran Hotel - ${title}`}</title>
-		<ClientRouter />
-		<SpeedInsights />
-	</head>
-	<body>
-		<Header />
-		<slot />
-		<Footer />
-	</body>
+  <head>
+    <meta
+      name="description"
+      content="Gran Hotel está ubicada en el centro de Medellín, disfruta de nuestras elegantes instalaciones diseñadas para brindarte la mejor experiencia"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{`Gran Hotel - ${title}`}</title>
+    <ClientRouter />
+    <SpeedInsights />
+    <Analytics />
+  </head>
+  <body>
+    <Header />
+    <slot />
+    <Footer />
+  </body>
 </html>
 
 <style is:global>
+  html,
+  body {
+    height: 100%;
+  }
 
-	html, body{
-		height: 100%;
-	}
+  @font-face {
+    font-family: "Raleway";
+    src: url("/fonts/Inter_18pt-Regular.woff2");
+  }
 
-	@font-face {
-		font-family: "Raleway";
-		src: url("/fonts/Inter_18pt-Regular.woff2");
-	}
+  @font-face {
+    font-family: "Raleway";
+    font-weight: bold;
+    src: url("/fonts/Inter_24pt-Bold.woff2");
+  }
 
-	@font-face {
-		font-family: "Raleway";
-		font-weight: bold;
-		src: url("/fonts/Inter_24pt-Bold.woff2");
-	}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", system-ui;
+    scroll-behavior: smooth;
+  }
 
-	* {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-		font-family: "Raleway", system-ui;
-		scroll-behavior: smooth;
-	}
+  @keyframes fade-in-lr {
+    from {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
 
-	@keyframes fade-in-lr {
-		from {
-			transform: translateX(-100px);
-			opacity: 0;
-		}
-		to {
-			transform: translateX(0);
-			opacity: 1;
-		}
-	}
+  @keyframes fade-in-bt {
+    from {
+      opacity: 0;
+      transform: translateY(100px);
+    }
 
-	@keyframes fade-in-bt {
-		from {
-			opacity: 0;
-			transform: translateY(100px);
-		}
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
-		to {
-			opacity: 1;
-			transform: translateY(0);
-		}
-	}
+  @keyframes slide-in-lr {
+    from {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
 
-	@keyframes slide-in-lr {
-		from {
-			opacity: 0;
-			transform: translateX(-100px);
-		}
-
-		to {
-			opacity: 1;
-			transform: translateX(0);
-		}
-	}
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 </style>
