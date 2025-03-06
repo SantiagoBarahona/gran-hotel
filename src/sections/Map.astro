@@ -1,8 +1,12 @@
 ---
 import LeafletMap from "@/components/LeafletMap.astro";
+import SectionTitle from "@/components/SectionTitle.astro";
 ---
 
-<section class="bg-slate-200 pb-section-vertical">
+<section
+  class="bg-gradient-to-b from-transparent via-slate-200/50 to-slate-200 pb-section-vertical"
+>
+  <SectionTitle>Ubicación</SectionTitle>
   <LeafletMap
     latitude={6.251108}
     longitude={-75.5656649}
