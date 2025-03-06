@@ -43,12 +43,16 @@ const {
       constructor() {
         super();
 
-        const latlng = [
+        const latlng: L.LatLngTuple = [
           Number(this.dataset.latitude),
           Number(this.dataset.longitude),
         ];
 
-        var map = window.L.map(this.dataset.container, {
+        const container = this.dataset.container;
+        if (!container) {
+          throw new Error("Container ID is required");
+        }
+        var map = window.L.map(container, {
           scrollWheelZoom: true, // Desactivar zoom con scroll
           dragging: true, // Desactivar arrastrar
         }).setView(latlng, Number(this.dataset.zoom));
@@ -59,19 +63,25 @@ const {
           map.dragging.enable();
         });
 
-        window.L.tileLayer(this.dataset.tiles, {
+        const tiles = this.dataset.tiles;
+        if (!tiles) {
+          throw new Error("Tile layer URL is required");
+        }
+        window.L.tileLayer(tiles, {
           attribution: this.dataset.attribution,
         }).addTo(map);
 
         // Modificar el marker por defecto
         var myIcon = window.L.icon({
-          iconUrl: "images/icons/marker.png",
-          iconSize: [25, 41],
+          iconUrl: "map/hotel.svg",
+          iconSize: [75, 75],
           iconAnchor: [12, 41],
-          popupAnchor: [1, -34],
+          popupAnchor: [27, -34],
           shadowSize: [41, 41],
         });
-        window.L.marker(latlng).addTo(map).bindPopup("Gran Hotel Medellín");
+        window.L.marker(latlng, { icon: myIcon })
+          .addTo(map)
+          .bindPopup("Gran Hotel Medellín");
       }
     }
 
