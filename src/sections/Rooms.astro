@@ -1,6 +1,7 @@
 ---
 import Button from "@/atoms/Button.astro";
 import RoomCard from "@/components/RoomCard.astro";
+import SectionTitle from "@/components/SectionTitle.astro";
 
 const roomData = [
   {
@@ -43,9 +44,7 @@ const roomData = [
 ---
 
 <section id="habitaciones">
-  <h2 class="text-4xl text-center mb-2">
-    <span class="inline"><strong>Habitaciones</strong></span>
-  </h2>
+  <SectionTitle>Habitaciones</SectionTitle>
   <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
     {
       roomData.map((room) => (
