@@ -160,7 +160,6 @@ const links = [
   document.addEventListener("astro:page-load", () => {
     const currentLinkPath = location.pathname + location.hash;
     const currentLinkSelected = document.getElementById(currentLinkPath);
-    console.log(currentLinkPath, currentLinkSelected);
     if (currentLinkSelected) currentLinkSelected.classList.add("active");
     const navbarLinks = document.querySelectorAll(".navbar-link");
     navbarLinks.forEach((link) =>
