@@ -1,0 +1,14 @@
+---
+import LeafletMap from "@/components/LeafletMap.astro";
+---
+
+<section class="bg-slate-200 pb-section-vertical">
+  <LeafletMap
+    latitude={6.251108}
+    longitude={-75.5656649}
+    zoom={16}
+    container="map-container"
+    tileLayer="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+    attribution="© OpenStreetMap © CARTO"
+  />
+</section>
