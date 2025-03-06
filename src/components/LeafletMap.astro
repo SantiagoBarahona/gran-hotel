@@ -53,8 +53,8 @@ const {
           throw new Error("Container ID is required");
         }
         var map = window.L.map(container, {
-          scrollWheelZoom: true, // Desactivar zoom con scroll
-          dragging: true, // Desactivar arrastrar
+          scrollWheelZoom: false, // Desactivar zoom con scroll
+          dragging: false, // Desactivar arrastrar
         }).setView(latlng, Number(this.dataset.zoom));
 
         // Activar interactividad al hacer clic
