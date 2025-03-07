@@ -74,14 +74,13 @@ const {
         // Modificar el marker por defecto
         var myIcon = window.L.icon({
           iconUrl: "map/hotel.svg",
-          iconSize: [75, 75],
-          iconAnchor: [12, 41],
-          popupAnchor: [27, -34],
+          iconSize: [42, 42],
+          popupAnchor: [0, -15],
           shadowSize: [41, 41],
         });
         window.L.marker(latlng, { icon: myIcon })
           .addTo(map)
-          .bindPopup("Gran Hotel Medellín");
+          .bindPopup("Gran Hotel Medellín. Calle 54 #45 - 92");
       }
     }
 
