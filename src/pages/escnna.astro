@@ -1,21 +1,43 @@
 ---
-import Content from "@/content/escnna.md"
+import Content from "@/content/escnna.md";
 import Layout from "@/layouts/Layout.astro";
 ---
 
 <Layout title={"ESCNNA"}>
-    <div class="background w-screen h-screen">
-        <article class="prose prose-h1:text-white prose-p:text-white prose-strong:text-white  prose-p:bg-black/50 prose-p:p-4 prose-p:rounded-xl prose-p:shadow-md prose-p:shadow-black mx-auto max-sm:mx-5 py-20 backdrop:blur-lg">
-                <Content />
-        </article>
+  <section class="w-screen h-screen relative background">
+    <div
+      class="w-full h-full absolute bg-gradient-to-b from-black/80 via-black/40 to-transparent z-10"
+    >
     </div>
+    <article
+      class="[&>p]:text-white absolute pt-28 px-section-mobile md:px-section z-20 md:max-w-lg text-balance"
+    >
+      <h1 class="text-4xl font-bold text-white mb-4">
+        Gran Operador de Servicios SAS
+      </h1>
+      <p class="mb-4">
+        Considerando que la explotación de seres humanos en cualquiera de su
+        formas, especialmente la sexual y en particular cuando afecta a niños,
+        niñas y adolescentes, vulnera los objetivos fundamentales del turismo y
+        constituye una negación de su esencia.
+      </p>
+      <p>
+        En nuestra Organización rechazamos, la explotación Sexual de Niños,
+        Niñas y Adolescentes, ya que desvirtúa nuestra razón de ser y atenta
+        contra los derechos humanos. <strong
+          >Denunciamos a quienes pretenden utilizar nuestro hotel para dichas
+          prácticas.</strong
+        >
+      </p>
+    </article>
+  </section>
 </Layout>
 
 <style>
-    .background{
-        background-image: url(/escnna/escnna.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
+  .background {
+    background-image: url(/escnna/escnna.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 </style>
